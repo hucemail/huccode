@@ -24,6 +24,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "变量和数据类型", "�
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "类型转换", "类型转换\", "{FEEEB33F-63EB-4A3A-875E-C89A8A70E0BB}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_9300"
+		Debug.AspNetCompiler.PhysicalPath = "类型转换\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9300\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_9300"
+		Release.AspNetCompiler.PhysicalPath = "类型转换\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9300\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "9300"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +52,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B9B0BFF2-D8BF-40CC-9B82-DD02389B0941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B9B0BFF2-D8BF-40CC-9B82-DD02389B0941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEEEB33F-63EB-4A3A-875E-C89A8A70E0BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEEEB33F-63EB-4A3A-875E-C89A8A70E0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

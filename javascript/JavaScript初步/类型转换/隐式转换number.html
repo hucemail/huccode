@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        convert(true);//1
+        convert(NaN);//NaN
+        convert(undefined);//NaN
+        convert("2d");//NaN
+        convert(" 0xa");//10
+        convert("01001");//1001
+        convert(null);//NaN
+        convert({});//NaN
+        convert([]);//0
+        convert(["2"]);//0
+        convert(["2", "s"]);//NaN
+        function convert(val)
+        {
+            document.writeln((typeof val) + "类型值：&nbsp;" + val + "&nbsp;&nbsp;转换number类型为&nbsp;&nbsp;"+(1*val)+"<br/>");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        //Number
+        document.writeln(Number(" 10.5"));//10.5
+        document.writeln("<br/>");
+        document.writeln(Number(" 10.5s"));//NaN
+        document.writeln("<br/>");
+        document.writeln(Number(" s10.5"));//NaN
+        document.writeln("<br/>");
+        document.writeln(Number(" 10.5s2"));//NaN
+        document.writeln("<hr/>");
+        //parseInt
+        document.writeln(parseInt(" 10.5"));//10
+        document.writeln("<br/>");
+        document.writeln(parseInt(" 10.5s"));//10
+        document.writeln("<br/>");
+        document.writeln(parseInt(" s10.5"));//NaN
+        document.writeln("<br/>");
+        document.writeln(parseInt(" 10.5s2"));//10
+        document.writeln("<hr/>");
+        //parseFloat
+        document.writeln(parseFloat(" 10.5"));//10.5
+        document.writeln("<br/>");
+        document.writeln(parseFloat(" 10.5s"));//10.5
+        document.writeln("<br/>");
+        document.writeln(parseFloat(" s10.5"));//NaN
+        document.writeln("<br/>");
+        document.writeln(parseFloat(" 10.5s2"));//10.5
+    </script>
+</head>
+<body>
+
+</body>
+</html>

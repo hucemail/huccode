@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        convert(0);//false
+        convert(0.0);//false
+        convert(null);//false
+        convert(NaN);//false
+        convert(undefined);//false
+        convert("");//false
+        document.writeln("<hr/>");
+        convert([]);//true
+        convert({});//true
+        convert(" ");//true
+        convert("1");//true
+        convert(0.1);//true
+        function convert(val)
+        {
+            if(val)
+                document.writeln((typeof val) + "类型值：&nbsp;" + val + "&nbsp;&nbsp;转换boolean类型为&nbsp;&nbsp;true<br/>");
+            else
+                document.writeln((typeof val)+"类型值：&nbsp;" + val + "&nbsp;&nbsp;转换boolean类型为&nbsp;&nbsp;false<br/>");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
