@@ -8,6 +8,10 @@
         a = void (b = 3, c = 5, d = 9);
         alert(a);//undefined
         alert(typeof 10);//number
+
+        //检测对象创建的原型
+        var obj = new Object();
+        alert(obj instanceof Object);//true
     </script>
 </head>
 <body>

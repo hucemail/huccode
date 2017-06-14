@@ -21,6 +21,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "变量和数据类型", "�
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "15853"
+		SlnRelativePath = "变量和数据类型\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -42,6 +43,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "类型转换", "类型转�
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "9300"
+		SlnRelativePath = "类型转换\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -63,6 +65,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "表达式和运算符", "�
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "12811"
+		SlnRelativePath = "表达式和运算符\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "流程控制", "流程控制\", "{C08F3DB2-A944-44A0-94F5-B0AD9853CB92}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_20923"
+		Debug.AspNetCompiler.PhysicalPath = "流程控制\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_20923\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_20923"
+		Release.AspNetCompiler.PhysicalPath = "流程控制\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_20923\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "20923"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -77,6 +101,8 @@ Global
 		{FEEEB33F-63EB-4A3A-875E-C89A8A70E0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74F2A446-7022-4CD8-A7D2-DCAD64FA431D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{74F2A446-7022-4CD8-A7D2-DCAD64FA431D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C08F3DB2-A944-44A0-94F5-B0AD9853CB92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C08F3DB2-A944-44A0-94F5-B0AD9853CB92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
