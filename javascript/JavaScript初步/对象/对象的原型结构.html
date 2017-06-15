@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function foo() { }
+        foo.prototype.z = 10;
+        var o1 = new foo();
+        o1.x = 20;
+        var o2 = new foo();
+        o2.x = 30;
+        console.log(o1.x);//20
+        console.log(o2.x);//30
+        console.log(o1.z);//10
+        console.log(o1.z);//10
+    </script>
+</head>
+<body>
+
+</body>
+</html>

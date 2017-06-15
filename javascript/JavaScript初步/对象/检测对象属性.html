@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function foo() { }
+        //foo的原型属性
+        foo.prototype.z = 10;
+        var o1 = new foo();
+        //对象属性
+        o1.x = 20;
+        var o2 = new foo();
+        //对象属性
+        o2.x = 30;
+
+        //in检测，包含原型链的属性，找到属性返回true否则返回false
+        console.log("x" in o1); //true
+        console.log("z" in o1); //true
+
+        //hasOwnProperty检测，不包含原型链的属性，找到属性返回true否则返回false
+        console.log(o1.hasOwnProperty("x")); //true
+        console.log(o1.hasOwnProperty("z")); //false
+
+
+        var o3 = Object.create({ name: "haha" });
+        o3.age = 10;
+        //in检测
+        console.log("name" in o3); //true
+        console.log("age" in o3); //true
+        //hasOwnProperty检测
+        console.log(o3.hasOwnProperty("name")); //false
+        console.log(o3.hasOwnProperty("age")); //true
+    </script>
+</head>
+<body>
+
+</body>
+</html>

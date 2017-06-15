@@ -90,6 +90,48 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "流程控制", "流程控�
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "函数", "函数\", "{58B5011E-C7AB-45DD-8E14-FBD03788B112}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_39607"
+		Debug.AspNetCompiler.PhysicalPath = "函数\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_39607\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_39607"
+		Release.AspNetCompiler.PhysicalPath = "函数\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_39607\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "39607"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "对象", "对象\", "{11ACD3CD-FCD6-42BC-989E-8B7FC4DAB892}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_17759"
+		Debug.AspNetCompiler.PhysicalPath = "对象\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_17759\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_17759"
+		Release.AspNetCompiler.PhysicalPath = "对象\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_17759\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "17759"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -103,6 +145,10 @@ Global
 		{74F2A446-7022-4CD8-A7D2-DCAD64FA431D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C08F3DB2-A944-44A0-94F5-B0AD9853CB92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C08F3DB2-A944-44A0-94F5-B0AD9853CB92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58B5011E-C7AB-45DD-8E14-FBD03788B112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58B5011E-C7AB-45DD-8E14-FBD03788B112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11ACD3CD-FCD6-42BC-989E-8B7FC4DAB892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11ACD3CD-FCD6-42BC-989E-8B7FC4DAB892}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
