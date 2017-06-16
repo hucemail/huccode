@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var obj = { name: "gg" };
+
+        //true
+        console.log(Object.isExtensible(obj));
+        //正常可扩展，可添加属性，输出：["name", "age"]
+        obj.age = 12;
+        console.log(Object.getOwnPropertyNames(obj));
+
+
+        //变为不可扩展,变为不可扩展之后就不能在设置为可扩展了
+        Object.preventExtensions(obj);
+        //false
+        console.log(Object.isExtensible(obj));
+        //不可扩展，添加属性失败，输出：["name", "age"]
+        obj.x = 10;
+        console.log(Object.getOwnPropertyNames(obj));
+
+
+        //不可扩展也可以删除原有的属性，只是不能新增
+        delete obj.age;
+        //["name"]
+        console.log(Object.getOwnPropertyNames(obj));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

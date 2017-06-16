@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var obj = { name: "gg" };
+
+        //true
+        console.log(Object.isSealed(obj));
+        //正常可扩展和配置，可添加属性，输出：["name", "age"]
+        obj.age = 12;
+        console.log(Object.getOwnPropertyNames(obj));
+
+
+        //变为不可扩展和配置,变为不可扩展之后就不能在设置为可扩展了
+        Object.seal(obj);
+        //false
+        console.log(Object.isSealed(obj));
+        //不可扩展和配置，添加属性失败，输出：["name", "age"]
+        obj.x = 10;
+        console.log(Object.getOwnPropertyNames(obj));
+
+
+        //不可扩展和配置删除原有的属性失败
+        delete obj.age;
+        //["name", "age"]
+        console.log(Object.getOwnPropertyNames(obj));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

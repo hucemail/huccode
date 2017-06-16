@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var obj = { x: 1 };
+        Object.defineProperty(obj, "y", {
+            value: 2,
+            configurable:true
+        });
+        console.log(obj.y);//2
+        //writable是false，修改失败
+        obj.y = 10
+        console.log(obj.y);//2
+
+        //
+        Object.defineProperty(obj, "y", {
+           writable:true
+        });
+        //writable是true，修改成功
+        obj.y = 10
+        console.log(obj.y);//10
+    </script>
+</head>
+<body>
+
+</body>
+</html>

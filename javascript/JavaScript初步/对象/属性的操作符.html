@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function Person(name)
+        {
+            this.name = name;
+        }
+        Person.prototype.skinColor = "黄色";
+        var jack = new Person("Jack");
+        Object.defineProperties(jack, {
+            age: {
+                writable: true,
+                enumerable: true
+            },
+            height: {
+                writable: true
+            },
+            test: {
+            }
+        });
+        
+        //(4) ["name", "age", "height", "test"]
+        console.log(Object.getOwnPropertyNames(jack));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+ 

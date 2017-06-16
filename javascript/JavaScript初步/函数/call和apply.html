@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var arr1 = [1, 3];
+        var arr2 = [4, 5, 6];
+        //分析： 数组的push接收的是可变参数，所以这里使用apply来调用
+        // arr2.push或者是arr1.push或者是Array.prototype.push都无所谓。
+        //需要将arr2的数据push到arr1中，使用arr1的环境来push，所以第一个参数是arr1，第二个参数是arr2
+        arr2.push.apply(arr1, arr2);
+        console.log(arr1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

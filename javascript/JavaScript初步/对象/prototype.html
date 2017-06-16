@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var obj1 = {};
+        function Person() { }
+        var obj2 = new Person();
+        var obj3 = Object.create(null);
+        var obj4 = Object.create(obj2);
+
+        console.log(obj2.__proto__);
+
+
+        //Object.prototype在obj1的原型链上，返回true
+        console.log(Object.prototype.isPrototypeOf(obj1));
+
+        //Object.prototype在obj2的原型链上，返回true
+        console.log(Object.prototype.isPrototypeOf(obj2));
+        //Person.prototype在obj2的原型链上，返回true
+        console.log(Person.prototype.isPrototypeOf(obj2));
+
+
+        //obj3的指定的原型链式null，返回false
+        console.log(Object.prototype.isPrototypeOf(obj3));
+
+        //Object.prototype在obj4的原型链上，返回true
+        console.log(Object.prototype.isPrototypeOf(obj4));
+        //Person.prototype在obj4的原型链上，返回true
+        console.log(Person.prototype.isPrototypeOf(obj4));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

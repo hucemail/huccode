@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var obj1 = {};
+        var obj2 = new Array();
+        //[object Object]
+        console.log(obj1.toString());
+        //[object Array]  Array重写了toString，所以需要使用call将Object的toString方法代入obj2的执行环境执行
+        console.log(Object.prototype.toString.call(obj2));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

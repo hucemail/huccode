@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var obj = { name: "gg" };
+
+        //true
+        console.log(Object.isFrozen(obj));
+        //正常可扩展和配置和可写，可添加属性，输出：["name", "age"]
+        obj.age = 12;
+        console.log(Object.getOwnPropertyNames(obj));
+
+
+        //变为不可扩展、配置、可写
+        Object.freeze(obj);
+        //false
+        console.log(Object.isFrozen(obj));
+        //不可扩展、配置、可写，添加属性失败，输出：["name", "age"]
+        obj.x = 10;
+        console.log(Object.getOwnPropertyNames(obj));
+
+
+        //不可扩展、配置、可写删除原有的属性失败
+        delete obj.age;
+        //["name", "age"]
+        console.log(Object.getOwnPropertyNames(obj));
+
+        //不可扩展、配置、可写,修改属性值失败
+        obj.name = "xx";
+        //gg
+        console.log(obj.name);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
