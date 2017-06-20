@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        //第二个参数0-11代表1-12月
+        var date = new Date("2016-11-12 23:06:30");
+        //getFullYear:获得年份,返回四位数的年份
+        console.log(date.getFullYear());//2016
+        //getYear:获得年份,返回当前年份-1900年
+        console.log(date.getYear());//116
+
+
+        //getMonth:获得月份,11代表12月  0代表1月
+        console.log(date.getMonth());//10
+        //getDate:获得日
+        console.log(date.getDate());//12
+        //getDay:获得星期的某一天，返回值是0(周日)到6（周六）
+        console.log(date.getDay());//6
+        //getHours:获得小时数
+        console.log(date.getHours());//23
+        //getMinutes:获得分钟数
+        console.log(date.getMinutes());//6
+        //getSeconds:获得秒数
+        console.log(date.getSeconds());//30
+        //getMilliseconds:获得毫秒数
+        console.log(date.getMilliseconds());//0
+        //getTime:获得时间搓
+        console.log(date.getTime());//1478963190000
+
+
+        //toJSON:获得json日期字符串,以美国时间为准，倒了时差
+        console.log(date.toJSON());//2016-11-12T15:06:30.000Z
+        //toString:返回时间字符串，以本地标准时间为准
+        console.log(date.toString());//Sat Nov 12 2016 23:06:30 GMT+0800 (中国标准时间)
+        //valueOf:获得时间搓
+        console.log(date.valueOf())//1478963190000
+    </script>
+</head>
+<body>
+
+</body>
+</html>
