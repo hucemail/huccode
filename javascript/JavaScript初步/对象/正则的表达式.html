@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var str = "Java\
+        \n.Net\
+        \nC#\
+        \nRuby\
+        \nPHP";
+
+        //匹配以z或者r开头的字符串，全局匹配
+        console.log(/^[zr]/im.test(str));//true
+
+        //匹配不以j.crp开头的字符串，全局匹配
+        console.log(/^[^j.crp]/im.test(str));//false
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
