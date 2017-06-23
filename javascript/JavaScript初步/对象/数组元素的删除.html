@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var array = [];
+        array.push(0, 1, 2, 3, 4, 5, 6, 7);
+        console.log(array);//[0,1, 2,3,4,5,6,7]
+        //修改长度来删除数组元素
+        array.length = 7;
+        console.log(array);//[0,1, 2,3,4,5,6]
+
+        //通过pop来删除数组末尾的元素，返回被删除的元素
+        var tmp = array.pop();
+        console.log(tmp);//6
+        console.log(array);//[0,1, 2,3,4,5]
+
+        //通过shift来删除数组开始的元素，返回被删除的元素
+        tmp = array.shift();
+        console.log(tmp);//0
+        console.log(array);//[1, 2,3,4,5]
+    </script>
+</head>
+<body>
+
+</body>
+</html>

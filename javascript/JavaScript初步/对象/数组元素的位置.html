@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var array = [1, 3, 10, 25, "java", true,"javaScript", "Ruby", 'a', true];
+        //从数组末尾开始往前找，注意第二个参数，比如是9，那么它第一次查找是从下标为9开始，而不是下标为8开始
+        var i = array.length-1;
+        while (true) {
+            i = array.lastIndexOf(true, i);
+            if (i < 0) {
+                break;
+            }
+            else {
+                //输出：9，5
+                console.log(i);
+                i--;
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

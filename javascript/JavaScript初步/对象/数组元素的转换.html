@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var color = ["red", "black", "yellow"];
+        var color2 = color.valueOf();
+        color2[1] = "xx";
+        console.log(color);//["red", "xx", "yellow"]
+        console.log(color.toString());//red,xx,yellow
+
+        //和toString一样
+        console.log(color.toLocaleString());//red,xx,yellow
+    </script>
+</head>
+<body>
+
+</body>
+</html>

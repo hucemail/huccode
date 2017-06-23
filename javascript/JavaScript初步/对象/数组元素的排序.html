@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var array = [2, 5, 9, 1,10];
+        //升序
+        array.sort(function (v1, v2) {
+            //可以这样
+            return v1 - v2;
+            //也可以这样
+            //if (v1 < v2) return -1;
+            //else if (v1 > v2) return 1;
+            //else return 0;
+        });
+        console.log(array);// [1, 2, 5, 9, 10]
+        //反转数组
+        array.reverse();
+        console.log(array);//[10, 9, 5, 2, 1]
+    </script>
+</head>
+<body>
+
+</body>
+</html>

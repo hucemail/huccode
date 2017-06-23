@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var sum= array.reduceRight(function (prev, cur, index) {
+            console.log("prev:" + prev + ",cur:" + cur + ",index:" + index);
+            return prev + cur;
+        });
+        console.log(sum);
+        //输出结果：
+        //prev:10,cur:9,index:8
+        //prev:19,cur:8,index:7
+        //prev:27,cur:7,index:6
+        //prev:34,cur:6,index:5
+        //prev:40,cur:5,index:4
+        //prev:45,cur:4,index:3
+        //prev:49,cur:3,index:2
+        //prev:52,cur:2,index:1
+        //prev:54,cur:1,index:0
+        //55
+    </script>
+</head>
+<body>
+
+</body>
+</html>
