@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        window.onload = function () {
+            document.getElementById("btn").onclick = function (e) {
+                alert("按钮点击事件");
+                //解决IE9以下版本不支持参数代入event对象的兼容性问题
+                var e = e || window.event;
+                if (typeof e.cancelBubble == undefined) {
+                    e.stopPropagation();
+                }
+                else {
+                    //IE9以下的写法
+                    e.cancelBubble = true;
+                }
+            }
+            document.getElementById("box").onclick = function () {
+                alert("DIV点击事件");
+            }
+            document.body.onclick = function () {
+                alert("BODY点击事件");
+            }
+            document.documentElement.onclick = function () {
+                alert("HTML点击事件");
+            }
+            document.onclick = function () {
+                alert("DOCUMENT点击事件");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box" style="width:200px;height:200px;background-color:aliceblue;text-align:center;line-height:200px;">
+        <input type="button" value="事件冒泡测试" id="btn" />
+    </div>
+</body>
+</html>

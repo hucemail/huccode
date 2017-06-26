@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        window.onload = function () {
+            var btn = document.getElementById("btn");
+            var box = document.getElementById("box");
+
+            btn.addEventListener("click", function (e) {
+                //打印event对象信息，可以看到里面有N多属性。
+                // console.log(e);
+                console.log("btn_bubbles:" + e.bubbles);
+                console.log("btn_cancelable:" + e.cancelable);
+                console.log("btn_currentTarget:" + e.currentTarget);
+                console.log("btn_eventPhase:" + e.eventPhase);
+                console.log("btn_target:" + e.target);
+                console.log("btn_timeStamp:" + e.timeStamp);
+                console.log("btn_type:" + e.type);
+            }, true);
+            box.addEventListener("click", function (e) {
+                console.log("box_bubbles:" + e.bubbles);
+                console.log("box_cancelable:" + e.cancelable);
+                console.log("box_currentTarget:" + e.currentTarget);
+                console.log("box_eventPhase:" + e.eventPhase);
+                console.log("box_target:" + e.target);
+                console.log("box_timeStamp:" + e.timeStamp);
+                console.log("box_type:" + e.type);
+            }, true);
+        }
+        //输出结果
+        //box_bubbles:true
+        //box_cancelable:true
+        //box_currentTarget:[object HTMLDivElement]
+        //box_eventPhase:1
+        //box_target:[object HTMLInputElement]
+        //box_timeStamp:1382.83
+        //box_type:click
+        //btn_bubbles:true
+        //btn_cancelable:true
+        //btn_currentTarget:[object HTMLInputElement]
+        //btn_eventPhase:2
+        //btn_target:[object HTMLInputElement]
+        //btn_timeStamp:1382.83
+        //btn_type:click
+    </script>
+</head>
+<body>
+    <div id="box" style="width:200px;height:200px;background-color:aliceblue;text-align:center;line-height:200px;">
+        <input type="button" value="百度二下" id="btn" />
+    </div>
+</body>
+</html>

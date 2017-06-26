@@ -87,6 +87,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "流程控制", "流程控�
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "20923"
+		SlnRelativePath = "流程控制\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -108,6 +109,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "函数", "函数\", "{58B50
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "39607"
+		SlnRelativePath = "函数\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -129,6 +131,29 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "对象", "对象\", "{11ACD
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "17759"
+		SlnRelativePath = "对象\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "事件", "事件\", "{9A8DDCE5-F3CB-48B0-899F-2F4C0D64C836}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_3656"
+		Debug.AspNetCompiler.PhysicalPath = "事件\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3656\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_3656"
+		Release.AspNetCompiler.PhysicalPath = "事件\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3656\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3656"
+		SlnRelativePath = "事件\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
@@ -149,6 +174,8 @@ Global
 		{58B5011E-C7AB-45DD-8E14-FBD03788B112}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11ACD3CD-FCD6-42BC-989E-8B7FC4DAB892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11ACD3CD-FCD6-42BC-989E-8B7FC4DAB892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8DDCE5-F3CB-48B0-899F-2F4C0D64C836}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8DDCE5-F3CB-48B0-899F-2F4C0D64C836}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
