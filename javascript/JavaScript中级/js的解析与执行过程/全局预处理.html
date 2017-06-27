@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var a = 10;
+        function func() {
+            alert(a);
+            //加上这句之后，上一句代码弹出了undefined
+            var a = 20;
+        }
+        func();
+        LexicalEnvironment = {
+            a: undefined
+            func:函数地址
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
