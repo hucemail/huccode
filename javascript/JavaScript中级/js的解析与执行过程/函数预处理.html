@@ -1,0 +1,28 @@
+﻿.<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function func(a, b) {
+            alert(a);
+            alert(b);
+            var a = 100;
+            function b() {
+                console.log("bb");
+            }
+        }
+        func(1, function () { });
+        //window = {
+        //    func:func函数的字符串表现形式
+        //}
+        //func = {
+        //    a: 1,
+        //    b: b函数的字符串表现形式,
+        //    arguments
+        //}
+    </script>
+</head>
+<body>
+
+</body>
+</html>

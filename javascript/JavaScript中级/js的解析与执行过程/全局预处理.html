@@ -3,21 +3,38 @@
 <head>
     <title></title>
     <script>
-        var a = 10;
-        function func() {
-            alert(a);
-            //加上这句之后，上一句代码弹出了undefined
-            var a = 20;
+        alert(a);
+        alert(b);
+        alert(f);
+        alert(g);
+        var a = 5;
+        b = 6;
+        alert(b);
+        function f()
+        {
+            console.log("f");
         }
-        func();
-        LexicalEnvironment = {
-            a: undefined
-            func:函数地址
+        var g = function () {
+            console.log("g");
         }
+        alert(g);
+
+        window = {
+            a: undefined,
+            f: function f() {
+                console.log("f");
+            },
+            g:undefined
+        }
+        //a  输出undefined
+        //b  报错，b is not defined
+        //f  输出f函数表达式
+        //g  输出undefined
+        //b  输出6
+        //g  输出g函数表达式
     </script>
 </head>
 <body>
 
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
