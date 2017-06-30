@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        (function () {
+
+            var x = 10;
+            function func()
+            {
+                alert("func"+x);
+            }
+            function func2() {
+                alert("func2" + x);
+            }
+            //给window对象添加一个属性，设置为func函数
+            window.func = func;
+        })();
+
+        //外层只能调用func，不能访问x和func2
+        func();
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
