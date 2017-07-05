@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function f1()
+        {
+            var x = 10;
+            return function () {
+                x++;
+                console.log(x);
+            }
+        }
+        var result = f1();
+        result();
+        result();
+        result = f1();
+        result();
+        result();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

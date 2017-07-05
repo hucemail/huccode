@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function calcFactory(base)
+        {
+            return function (count)
+            {
+                var sum = 0;
+                for (var i = 1; i <= count; i++) {
+                    sum += i;
+                }
+                alert(base + sum);
+            }
+        }
+        var result = calcFactory(2);
+        result(3);//8
+        result(4);//12
+    </script>
+</head>
+<body>
+
+</body>
+</html>

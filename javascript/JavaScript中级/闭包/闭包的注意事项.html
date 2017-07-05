@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+</head>
+<body>
+    <input type="button" value="第一个按钮" class="btn" />
+    <input type="button" value="第二个按钮" class="btn" />
+    <input type="button" value="第三个按钮" class="btn" />
+    <script>
+        var btns = document.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].onclick = (function (j) {
+                return function () {
+                    alert("第"+j+"个按钮");
+                };
+            })(i+1);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!--<script>
+        (function () {
+            function __InitEvent__(className) {
+
+            };
+            window.bindEvent = __InitEvent__;
+        })();
+</script>-->
