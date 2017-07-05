@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function Person()
+        {
+            this.name = "cj";
+        }
+        Person.prototype.count = 1;
+        var o = new Person();
+        var o1 = new Person();
+
+        console.log(o.count);
+
+        Person.prototype.count = 10;
+
+        console.log(o1.count);
+
+        Person.prototype = {xx:"xx"};
+
+        console.log(o.xx);
+
+        var o2 = new Person();
+        console.log(o2.xx);
+        console.log(o2.count);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

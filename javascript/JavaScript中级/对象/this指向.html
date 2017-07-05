@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var o = {
+            name: "对象o的name",
+            age:20
+        }
+        var o2 = {
+            name: "对象o2的name",
+            age:30
+        }
+        function func(k1,k2)
+        {
+            alert(k1 + ":" + this[k1] + " , " + k2 + ":" + this[k2]);
+        }
+        func.call(o, "name", "age");//name:对象o的name , age:20
+        func.apply(o2, ["name", "age"]);//name:对象o2的name , age:30
+    </script>
+</head>
+<body>
+
+</body>
+</html>
