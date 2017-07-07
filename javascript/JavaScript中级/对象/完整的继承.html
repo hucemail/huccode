@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        //父类:人
+        //都有名字和年龄，但是名字和年龄每个人都不一样，所以这是对象的实例成员
+        //都有头，且都只有一个头，都可以吃东西。这里相当于静态成员，使用原型属性最为合理
+        function Person(name, age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.header = 1;
+        Person.prototype.eat = function (foodName) {
+            console.log("我叫【" + this.name + "】，年龄【"+this.age+"】,我现在在吃【" + foodName + "】");
+        }
+
+
+        //子类：程序员
+        function Prograemmer(name,age,language)
+        {
+            //调用父类构造函数
+            Person.apply(this, arguments);
+            this.language = language;
+        }
+        
+        //继承实现
+        inherit(Prograemmer, Person);
+        function inherit(child,parent) {
+            child.prototype = Object.create(parent.prototype);
+            //改变构造函数
+            child.prototype.constructor = child;
+        }
+
+
+
+        //子类共有的原型属性，需要放在继承后面
+        Prograemmer.prototype.print = function (foodName) {
+            console.log(this.language + "程序员【" + this.name + "】说：");
+            this.eat(foodName);
+        }
+
+
+        //测试
+
+        var p1 = new Prograemmer("张三", 20, "Java");
+        var p2 = new Prograemmer("李四", 20, "JavaScript");
+        p1.print("饭");
+        p2.print("粉");
+        console.log("==============华丽的分割线==============");
+        p1.age = 30;
+        p1.print("饭");
+        p2.print("粉");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

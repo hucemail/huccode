@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        function Person()
+        {
+            this.name = "hh";
+        }
+        Person.prototype.age = 10;
+
+        function Programmer()
+        { }
+        
+
+        //继承
+        Programmer.prototype = Object.create(Person.prototype);
+        //修正构造函数
+        Programmer.prototype.constructor = Programmer;
+        //一定要放在继承后面
+        Programmer.prototype.xx = 20;
+        var p1 = new Programmer();
+        console.log(p1.name);//undefined
+        console.log(p1.xx);//20
+        console.log(p1.age);//10
+    </script>
+</head>
+<body>
+
+</body>
+</html>

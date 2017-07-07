@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var name = "global";
+        function Person(pname) {
+            //私有成员
+            function print() {
+                alert(temp.name);
+            }
+            //公共成员
+            var temp= {
+                name: pname,
+                getInfo: function () {
+                    print();
+                }
+            };
+            return temp;
+        }
+        var p1 =new  Person("Jack");
+        p1.getInfo();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
