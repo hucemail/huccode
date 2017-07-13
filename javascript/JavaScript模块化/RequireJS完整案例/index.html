@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="bundles/plugins/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bundles/plugins/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body>
+    <br />
+    <br />
+    <!-- Button trigger modal -->
+    <button id="btn-modal">弹出登录框</button>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <span><i class="icon-spinner icon-spin"></i>登录</span>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="请输入用户名" id="username">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">@</span>
+                        <input type="password" class="form-control" placeholder="请输入密码" id="password">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" id="btn-login" class="btn btn-primary">登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bundles/plugins/reuqire/require.js"></script>
+    <script src="bundles/common/require.config.js"></script>
+    <script>
+        require(["index"]);
+    </script>
+</body>
+</html>

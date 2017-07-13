@@ -3,7 +3,104 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CommonJS规范", "CommonJS规范\", "{71126B8C-2101-46F3-8D29-84605A8BFDB8}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_14272"
+		Debug.AspNetCompiler.PhysicalPath = "CommonJS规范\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_14272\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_14272"
+		Release.AspNetCompiler.PhysicalPath = "CommonJS规范\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_14272\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "14272"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RequireJS初识", "RequireJS初识\", "{F90A10F9-EDF4-4B76-A8D7-353AB59595E7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_24917"
+		Debug.AspNetCompiler.PhysicalPath = "RequireJS初识\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_24917\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_24917"
+		Release.AspNetCompiler.PhysicalPath = "RequireJS初识\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_24917\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "24917"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RequireJS完整案例", "RequireJS完整案例\", "{6AF91B51-E17D-4973-AF0A-9B457A02AAB0}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_27328"
+		Debug.AspNetCompiler.PhysicalPath = "RequireJS完整案例\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_27328\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_27328"
+		Release.AspNetCompiler.PhysicalPath = "RequireJS完整案例\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_27328\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "27328"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "seajs完整案例", "seajs完整案例\", "{81778339-C5F9-46AD-8123-B214E4FB3243}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_41358"
+		Debug.AspNetCompiler.PhysicalPath = "seajs完整案例\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_41358\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_41358"
+		Release.AspNetCompiler.PhysicalPath = "seajs完整案例\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_41358\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "41358"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71126B8C-2101-46F3-8D29-84605A8BFDB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71126B8C-2101-46F3-8D29-84605A8BFDB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F90A10F9-EDF4-4B76-A8D7-353AB59595E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F90A10F9-EDF4-4B76-A8D7-353AB59595E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AF91B51-E17D-4973-AF0A-9B457A02AAB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AF91B51-E17D-4973-AF0A-9B457A02AAB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81778339-C5F9-46AD-8123-B214E4FB3243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81778339-C5F9-46AD-8123-B214E4FB3243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
