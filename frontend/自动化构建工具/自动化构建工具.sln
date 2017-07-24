@@ -44,26 +44,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "初级使用FIS3", "初级�
 		VWDPort = "9135"
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "fis3-angular-demo-master", "C:\Users\Administrator\Downloads\fis3-angular-demo-master\", "{64F2464B-2F88-4D2C-A75E-796FD7AF0A7F}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_45120"
-		Debug.AspNetCompiler.PhysicalPath = "C:\Users\Administrator\Downloads\fis3-angular-demo-master\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_45120\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_45120"
-		Release.AspNetCompiler.PhysicalPath = "C:\Users\Administrator\Downloads\fis3-angular-demo-master\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_45120\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "45120"
-	EndProjectSection
-EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "集成解决方案FIS3", "集成解决方案FIS3\", "{FC31C1FF-DEB1-4C1D-94F0-768096B8A455}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
@@ -94,8 +74,6 @@ Global
 		{5B23050C-E00D-41D5-B016-757CB437ED41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DE2D181-3BF3-4308-AEAE-9C4C37CC779E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6DE2D181-3BF3-4308-AEAE-9C4C37CC779E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64F2464B-2F88-4D2C-A75E-796FD7AF0A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64F2464B-2F88-4D2C-A75E-796FD7AF0A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC31C1FF-DEB1-4C1D-94F0-768096B8A455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FC31C1FF-DEB1-4C1D-94F0-768096B8A455}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
