@@ -1,0 +1,40 @@
+﻿@import "variables","../../plugins/compass/compass/css3/border-radius";
+
+body {
+    background-color: $red; /*背景变红*/
+    h1 {
+        color: aqua;
+    }
+
+    img {
+        border: 10px solid #ffd800;
+        @include border-radius(10px);
+    }
+}
+
+.tags {
+    height: 50px;
+    background-color: #cd375e;
+    line-height: 50px;
+}
+
+.tags-item {
+    margin-left:20px;
+    color:white;
+    text-decoration:none;
+    padding:5px 25px;
+    font-size:12px;
+    border:1px solid #de7b95;
+    &:hover{
+        border:1px solid white;
+    }
+}
+.icon1{
+    background: #de7b95 url('../images/icon/icon1.png?__sprite') no-repeat 5px center;
+}
+.icon2{
+    background:#de7b95 url('../images/icon/icon2.png?__sprite') no-repeat 5px center;
+}
+.icon3{
+    background:#de7b95 url('../images/icon/icon3.png?__sprite') no-repeat 5px center;
+}

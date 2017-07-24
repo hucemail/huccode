@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="bundles/plugins/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="bundles/assets/css/test.scss" rel="stylesheet" />
+    <link href="bundles/assets/css/test2.scss" rel="stylesheet" />
+</head>
+<body>
+    <h1>Test</h1>
+    <link rel="import" href="template/_header.html?__inline" />
+    <img src="bundles/assets/images/special-2.jpg" />
+    <script src="bundles/plugins/reuqire/require.js"></script>
+    <script>
+        require(["test"], function (jq) {
+            console.log("index.html");
+            jq.init();
+        });
+    </script>
+</body>
+</html>
