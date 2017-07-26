@@ -63,7 +63,7 @@ fis.match('/bundles/assets/**/*.js', {
 //使用方法 fis3 release prod
 fis.media('prod')//CDN
     .match('*', {
-        domain: "http://www.cnd.com"
+        domain: ""
     })
     //MD5文件指纹
     .match('/bundles/assets/**', {
