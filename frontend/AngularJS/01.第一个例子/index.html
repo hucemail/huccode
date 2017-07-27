@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="bundles/js/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="app" ng-controller="ctrl">
+        <h1>{{title}}</h1>
+        <input type="text" placeholder="输入标题" ng-model="title" />
+    </div>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ["$scope",function ($scope) {
+            $scope.title = "初始标题";
+        }]);
+    </script>
+</body>
+</html>

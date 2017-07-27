@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "01.第一个例子", "01.第一个例子\", "{4577238A-D770-4DF4-98B1-C1250071C9C5}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_9995"
+		Debug.AspNetCompiler.PhysicalPath = "01.第一个例子\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9995\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_9995"
+		Release.AspNetCompiler.PhysicalPath = "01.第一个例子\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9995\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "9995"
+		SlnRelativePath = "01.第一个例子\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "03.$scope使用", "03.$scope使用\", "{7FCC13EF-F3B7-47AE-94D5-E5C00792AB5D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_10706"
+		Debug.AspNetCompiler.PhysicalPath = "03.$scope使用\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_10706\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_10706"
+		Release.AspNetCompiler.PhysicalPath = "03.$scope使用\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_10706\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "10706"
+		SlnRelativePath = "03.$scope使用\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "04.ng-cloak解决闪屏", "04.ng-cloak解决闪屏\", "{8337D4BD-4FB7-4D30-9575-7818262FC189}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_16267"
+		Debug.AspNetCompiler.PhysicalPath = "04.ng-cloak解决闪屏\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_16267\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_16267"
+		Release.AspNetCompiler.PhysicalPath = "04.ng-cloak解决闪屏\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_16267\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "16267"
+		SlnRelativePath = "04.ng-cloak解决闪屏\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4577238A-D770-4DF4-98B1-C1250071C9C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4577238A-D770-4DF4-98B1-C1250071C9C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FCC13EF-F3B7-47AE-94D5-E5C00792AB5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FCC13EF-F3B7-47AE-94D5-E5C00792AB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8337D4BD-4FB7-4D30-9575-7818262FC189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8337D4BD-4FB7-4D30-9575-7818262FC189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
