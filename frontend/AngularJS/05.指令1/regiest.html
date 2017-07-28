@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        .ng-cloak {
+            display: none;
+        }
+
+        body {
+            background-color: #F5F5F6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background-color: white;
+            padding: 10px;
+        }
+
+        h2 {
+            color: #373d41;
+            width: 272px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        form {
+            width: 272px;
+            margin: 10px auto;
+        }
+
+        .form-item-control {
+            margin-bottom: 25px;
+        }
+
+        input[type="text"], input[type="password"] {
+            padding: 9px;
+            width: 250px;
+        }
+        input[type="button"]{
+            padding:15px;
+            width: 272px;
+            background-color:aqua;
+        }
+        select{
+            padding: 9px;
+        }
+    </style>
+</head>
+<body ng-cloak class="ng-cloak">
+    <div class="container" ng-controller="ctrl">
+        <h2>添加新用户</h2>
+        <form>
+            <div class="form-item-control"><input type="text" placeholder="设置用户名" /></div>
+            <div class="form-item-control"><input type="password" placeholder="设置你的登录密码" /></div>
+            <div class="form-item-control"><input type="password" placeholder="请再次输入你的登录密码" /></div>
+            <div class="form-item-control"><input type="text" placeholder="请输入你的昵称" /></div>
+            <div class="form-item-control">性别：<input type="radio" />男<input type="radio" />女</div>
+            <div class="form-item-control">爱好：<input type="checkbox" />篮球<input type="checkbox" />足球<input type="checkbox" />健身</div>
+            <div class="form-item-control">
+                <select>
+                    <option>请选择</option>
+
+                    <option>上海</option>
+                </select>
+                <select>
+                    <option>请选择</option>
+                </select>
+                <select>
+                    <option>请选择</option>
+
+                    <option>浦东新区</option>
+                </select>
+            </div>
+            <div class="form-item-control"><input type="text" placeholder="请输入街道门牌号" /></div>
+            <div class="form-item-control"><input type="button" value="同意条款并添加" /></div>
+        </form>
+    </div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+
+        }]);
+    </script>
+</body>
+</html>

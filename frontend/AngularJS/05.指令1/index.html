@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        .ng-cloak {
+            display: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+        table {
+            width: 100%;
+            font-size: 12px;
+            border-collapse: collapse;/*边框合并*/
+            border: 1px solid #e1e6eb;
+        }
+        th,td {
+            border-bottom: 1px solid #e1e6eb;
+            text-align:left;
+            padding:10px 8px;
+        }
+        th {
+            background-color:#F5F6FA;
+            padding:6px 8px;
+        }
+        .no-data-info{
+            text-align:center;
+            padding:80px;
+        }
+    </style>
+</head>
+<body ng-cloak class="ng-cloak">
+    <div class="container" ng-controller="ctrl">
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" /></th>
+                    <th>用户名</th>
+                    <th>密码</th>
+                    <th>昵称</th>
+                    <th>性别</th>
+                    <th>爱好</th>
+                    <th>省</th>
+                    <th>市</th>
+                    <th>区/县</th>
+                    <th>街道/门号</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--<tr>
+                    <td><input type="checkbox" /></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>-->
+                <tr>
+                    <td colspan="11">
+                        <p class="no-data-info">亲，您还没有任何数据哦</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+
+        }]);
+    </script>
+</body>
+</html>
