@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    
+</head>
+<body ng-cloak class="ng-cloak">
+    <div class="container" ng-controller="ctrl">
+       <ul>
+           <li ng-repeat="v in news track by $index">
+             {{v}}
+           </li>
+       </ul>
+    </div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+            $scope.news = ["大", "小", "长", "短", "短"];
+        }]);
+    </script>
+</body>
+</html>

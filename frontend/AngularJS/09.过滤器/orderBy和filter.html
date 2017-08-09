@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-cloak class="ng-cloak">
+    <div class="container" ng-controller="ctrl">
+       <ul>
+           <li ng-repeat="v in users | orderBy:'age':false|filter:'海浦'">
+               {{$index}}/{{v.name}}/{{v.age}}/{{v.address}}/{{v.sex}}
+           </li>
+       </ul>
+    </div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+            $scope.users = [{
+                "name": "张三",
+                "age": 20,
+                "address": "上海浦东新区春晓路",
+                "sex":1
+            },{
+                "name": "李三",
+                "age": 30,
+                "address": "上海浦东新区世纪大道",
+                "sex":2
+            },
+            {
+                "name": "王五",
+                "age": 22,
+                "address": "上海黄埔区延安西路",
+                "sex": 2
+            },
+            {
+                "name": "赵六",
+                "age": 18,
+                "address": "上海普陀区梅岭北路",
+                "sex": 1
+            }]
+        }]);
+    </script>
+</body>
+</html>

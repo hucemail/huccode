@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-app="app">
+      <div ui-view></div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+    <script>
+        var app = angular.module("app", ["ui.router"]);
+        app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
+            $locationProvider.hashPrefix("");
+            $urlRouterProvider.otherwise("/hd");
+            $stateProvider.state("default", {
+                url: "/hd",
+                template:"<h3>标题</h3>"
+            });
+        }]);
+    </script>
+</body>
+</html>

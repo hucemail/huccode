@@ -8,37 +8,43 @@
         .ng-cloak {
             display: none;
         }
+
         .container {
             max-width: 1200px;
             margin: auto;
         }
+
         table {
             width: 100%;
             font-size: 12px;
-            border-collapse: collapse;/*边框合并*/
+            border-collapse: collapse; /*边框合并*/
             border: 1px solid #e1e6eb;
         }
-        th,td {
+
+        th, td {
             border-bottom: 1px solid #e1e6eb;
-            text-align:left;
-            padding:10px 8px;
+            text-align: left;
+            padding: 10px 8px;
         }
+
         th {
-            background-color:#F5F6FA;
-            padding:6px 8px;
+            background-color: #F5F6FA;
+            padding: 6px 8px;
         }
-        .no-data-info{
-            text-align:center;
-            padding:80px;
+
+        .no-data-info {
+            text-align: center;
+            padding: 80px;
         }
     </style>
 </head>
 <body ng-cloak class="ng-cloak">
     <div class="container" ng-controller="ctrl">
+        <button ng-click="getSelectionItem()">获取选中项</button>
         <table>
             <thead>
                 <tr>
-                    <th><input type="checkbox" /></th>
+                    <th><input type="checkbox" ng-model="tableSelectionStatus" ng-change="selectionAll()"/></th>
                     <th>用户名</th>
                     <th>密码</th>
                     <th>昵称</th>
@@ -52,20 +58,23 @@
                 </tr>
             </thead>
             <tbody>
-                <!--<tr>
-                    <td><input type="checkbox" /></td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                </tr>-->
-                <tr>
+                <tr ng-repeat="user in users">
+                    <td><input type="checkbox" ng-model="user.isChecked" ng-change="selectionItem()" /></td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.password}}</td>
+                    <td>{{user.nickname}}</td>
+                    <td>{{user.gender}}</td>
+                    <td>{{user.hobby}}</td>
+                    <td>{{user.province}}</td>
+                    <td>{{user.city}}</td>
+                    <td>{{user.county}}</td>
+                    <td>{{user.street}}</td>
+                    <td>
+                        <a href="javascript:;" ng-click="edit(user)">编辑</a>
+                        <a href="javascript:;" ng-click="del(user)">删除</a>
+                    </td>
+                </tr>
+                <tr ng-if="users==null||users.length<=0">
                     <td colspan="11">
                         <p class="no-data-info">亲，您还没有任何数据哦</p>
                     </td>
@@ -77,7 +86,75 @@
     <script>
         var app = angular.module("app", []);
         app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
-
+            $scope.users = [
+                {
+                    "userid": 1,
+                    "username": "三",
+                    "password": "123456",
+                    "nickname": "张三",
+                    "gender": 0,
+                    "hobby": "男球",
+                    "province": "上海",
+                    "city": "直辖市",
+                    "county": "浦东新区",
+                    "street": "张江镇古桐小区"
+                },
+                {
+                    "userid": 2,
+                    "username": "四",
+                    "password": "123456",
+                    "nickname": "李三",
+                    "gender": 1,
+                    "hobby": "男球",
+                    "province": "上海",
+                    "city": "直辖市",
+                    "county": "浦东新区",
+                    "street": "张江镇古桐小区"
+                }
+            ];
+            $scope.selectionAll = function () {
+                if ($scope.tableSelectionStatus) {
+                    //全选
+                    angular.forEach($scope.users, function (v, i) {
+                        v.isChecked = true;
+                    });
+                }
+                else {
+                    //反选
+                    angular.forEach($scope.users, function (v, i) {
+                        v.isChecked = false;
+                    });
+                }
+            };
+            $scope.selectionItem = function () {
+               var result= $scope.users.every(function (v, i) {
+                    if (!v.isChecked) {
+                        //子项有一个是反选，全选则取消
+                        $scope.tableSelectionStatus = false;
+                        return false;
+                    }
+                    return true;
+               });
+               if(result)
+                   $scope.tableSelectionStatus = true;
+            }
+            
+            $scope.getSelectionItem = function () {
+                var result= $scope.users.filter(function (v, i) {
+                    return v.isChecked;
+                });
+                console.log("所有选中项");
+                console.log(result);
+            }
+            $scope.edit = function (user)
+            {
+                console.log("点击了编辑" + user);
+                console.log(user);
+            }
+            $scope.del = function (user) {
+                console.log("点击了删除" + user);
+                console.log(user);
+            }
         }]);
     </script>
 </body>

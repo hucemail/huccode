@@ -40,12 +40,21 @@
             padding: 9px;
             width: 250px;
         }
-        input[type="button"]{
-            padding:15px;
+
+        input[type="button"] {
+            padding: 15px;
             width: 272px;
-            background-color:aqua;
+            background-color: #00c1de;
+            color: white;
+            border: 0px;
+            cursor: pointer;
         }
-        select{
+
+            input[type="button"]:hover {
+                background-color: #07b5cf;
+            }
+
+        select {
             padding: 9px;
         }
     </style>
@@ -54,36 +63,70 @@
     <div class="container" ng-controller="ctrl">
         <h2>添加新用户</h2>
         <form>
-            <div class="form-item-control"><input type="text" placeholder="设置用户名" /></div>
-            <div class="form-item-control"><input type="password" placeholder="设置你的登录密码" /></div>
-            <div class="form-item-control"><input type="password" placeholder="请再次输入你的登录密码" /></div>
-            <div class="form-item-control"><input type="text" placeholder="请输入你的昵称" /></div>
-            <div class="form-item-control">性别：<input type="radio" />男<input type="radio" />女</div>
-            <div class="form-item-control">爱好：<input type="checkbox" />篮球<input type="checkbox" />足球<input type="checkbox" />健身</div>
+            <div class="form-item-control"><input type="text" placeholder="设置用户名" ng-model="user.username" /></div>
+            <div class="form-item-control"><input type="password" placeholder="设置你的登录密码" ng-model="user.password" /></div>
+            <div class="form-item-control"><input type="password" placeholder="请再次输入你的登录密码" ng-model="user.repassword" /></div>
+            <div class="form-item-control"><input type="text" placeholder="请输入你的昵称" ng-model="user.nickname" /></div>
             <div class="form-item-control">
-                <select>
-                    <option>请选择</option>
+                性别：
+                <lable><input type="radio" ng-model="user.gender" ng-value="0" ng-change="user.hobbys=null" />男</lable>
+                <lable><input type="radio" ng-model="user.gender" ng-value="1" ng-change="user.hobbys=null" />女</lable>
+            </div>
+            <div class="form-item-control" ng-if="user.gender==1">
+                爱好：
+                <label><input type="checkbox"  ng-model="user.hobbys.wudao" ng-true-value="1" ng-false-value="0"/>舞蹈</label>
+                <label><input type="checkbox"  ng-model="user.hobbys.yinyue" ng-true-value="1" ng-false-value="0"/>音乐</label>
+                <label><input type="checkbox"  ng-model="user.hobbys.guangjie" ng-true-value="1" ng-false-value="0"/>逛街</label>
+            </div>
+            <div class="form-item-control" ng-if="user.gender!=1">
+                爱好：
+                <label><input type="checkbox"  ng-model="user.hobbys.lanqiu" ng-true-value="1" ng-false-value="0" />篮球</label>
+                <label><input type="checkbox" ng-model="user.hobbys.zuqiu" ng-true-value="1" ng-false-value="0" />足球</label>
+                <label><input type="checkbox" ng-model="user.hobbys.jianshen" ng-true-value="1" ng-false-value="0" />健身</label>
+            </div>
+            {{user.hobbys}}
 
-                    <option>上海</option>
-                </select>
-                <select>
-                    <option>请选择</option>
-                </select>
-                <select>
-                    <option>请选择</option>
-
-                    <option>浦东新区</option>
+            <div class="form-item-control">
+                省份：
+                <select ng-options="p.id as p.name for p in provinces" ng-model="user.province">
+                    <option value="">请选择</option>
                 </select>
             </div>
-            <div class="form-item-control"><input type="text" placeholder="请输入街道门牌号" /></div>
-            <div class="form-item-control"><input type="button" value="同意条款并添加" /></div>
+            <div class="form-item-control">
+                市：
+                <select ng-options="c.id as c.name for c in citys[user.province]" ng-model="user.city">
+                    <option value="">请选择</option>
+                </select>
+            </div>
+            <div class="form-item-control">
+                区/县：
+                <select ng-options="c.id as c.name for c in countys[user.city]" ng-model="user.county">
+                    <option value="">请选择</option>
+                </select>
+            </div>
+            <div class="form-item-control"><input type="text" placeholder="请输入街道门牌号" ng-model="user.street" /></div>
+            <div class="form-item-control"><input type="button" value="同意条款并添加" ng-click="submit()" /></div>
         </form>
     </div>
     <script src="bundles/js/angular.min.js"></script>
     <script>
         var app = angular.module("app", []);
         app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+            $scope.user = { gender: 0};
 
+            $http.get("/json/province.json").then(function (res) {
+                $scope.provinces = res.data;
+            });
+            $http.get("/json/city.json").then(function (res) {
+                $scope.citys = res.data;
+            });
+            $http.get("/json/county.json").then(function (res) {
+                $scope.countys = res.data;
+            });
+            
+            $scope.submit = function () {
+                console.log($scope.user);
+            }
         }]);
     </script>
 </body>

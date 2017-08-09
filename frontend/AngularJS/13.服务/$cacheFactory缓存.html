@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-cloak class="ng-cloak">
+    <div  ng-controller="ctrl">
+        {{data}}
+    </div>
+    <div ng-controller="ctrl1">
+        {{data}}
+    </div>
+    <ddl-test></ddl-test>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ["$scope", "$http", "$cacheFactory", function ($scope, $http, $cacheFactory) {
+            var obj = $cacheFactory("user");//创建user
+            obj.put("token", "233154848765441321478");
+            //obj.remove("token");
+            //obj.removeAll();
+            //obj.destroy();
+            $scope.data = obj.get("token");
+        }]);
+        app.controller("ctrl1", ["$scope", "$http", "$cacheFactory", function ($scope, $http, $cacheFactory) {
+            var obj = $cacheFactory.get("user");//获取user
+            $scope.data = obj.get("token");
+        }]);
+        app.directive("ddlTest", function () {
+            return {
+                retrice: "E",
+                template: "<div>{{data}}</div>",
+                replace: true,
+                scope: {},
+                controller: ["$scope", "$cacheFactory", function ($scope, $cacheFactory) {
+                    var obj = $cacheFactory.get("user");//获取user
+                    $scope.data = obj.get("token");
+                }]
+            };
+        });
+    </script>
+</body>
+</html>

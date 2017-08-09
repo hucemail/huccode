@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-cloak class="ng-cloak">
+    <div ng-controller="ctrl">
+        id:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="formdata.id" /><br />
+        name:&nbsp;&nbsp;<input type="text" ng-model="formdata.name" /><br />
+        time:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" ng-model="formdata.time" /><br />
+        gender:
+        <lable><input type="radio" ng-model="formdata.gender" ng-value="0" />男</lable>
+        <lable><input type="radio" ng-model="formdata.gender" ng-value="1" />女</lable>
+        <br /><br />
+        <input type="button" value="getModel" ng-click="getModel()" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <input type="button" value="getParas" ng-click="getParas()"  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <input type="button" value="postModel" ng-click="postModel()"  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <input type="button" value="postDynamic" ng-click="postDynamic()"  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <input type="button" value="postHeader" ng-click="postHeader()"  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <hr />
+        返回结果:{{data}}
+    </div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+            $scope.formdata = { gender: 0,time:new Date(),id:10,name:"alert('哈哈');" };
+            $scope.getModel = function () {
+                $http({
+                    method: "get",
+                    url: "http://127.0.0.1:9002/api/test/getmodel",
+                    params: $scope.formdata
+                }).then(function (res) {
+                    $scope.data = res.data;
+                }, function (error) {
+                    console.log(error);
+                });
+            }
+            $scope.getParas = function () {
+                $http({
+                    method: "get",
+                    url: "http://127.0.0.1:9002/api/test/getParas",
+                    params: $scope.formdata
+                }).then(function (res) {
+                    $scope.data = res.data;
+                }, function (error) {
+                    console.log(error);
+                });
+            }
+            $scope.postModel = function () {
+                $http({
+                    method: "post",
+                    url: "http://127.0.0.1:9002/api/test/postmodel",
+                    data: $scope.formdata
+                }).then(function (res) {
+                    $scope.data = res.data;
+                }, function (error) {
+                    console.log(error);
+                });
+            }
+            $scope.postDynamic = function () {
+                $http({
+                    method: "post",
+                    url: "http://127.0.0.1:9002/api/test/postDynamic",
+                    data: $scope.formdata
+                }).then(function (res) {
+                    $scope.data = res.data;
+                }, function (error) {
+                    console.log(error);
+                });
+            }
+            $scope.postHeader = function () {
+                $http({
+                    method: "post",
+                    url: "http://127.0.0.1:9002/api/test/postHeader",
+                    data: $scope.formdata,
+                    headers: {"Signature":"12548627484161859841"}
+                }).then(function (res) {
+                    $scope.data = res.data;
+                }, function (error) {
+                    console.log(error);
+                });
+            }
+           
+        }]);
+    </script>
+</body>
+</html>

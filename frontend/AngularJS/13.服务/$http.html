@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-cloak class="ng-cloak">
+    <div ng-controller="ctrl">
+        {{data}}
+    </div>
+    <div ng-controller="ctrl1">
+        {{data}}
+    </div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+            $http({
+                method: "get",
+                url: "/jsons/test.json",
+                cache:true
+            }).then(function (res) {
+                console.log(res);
+                $scope.data = res.data;
+            }, function (error) {
+                console.log(error);
+            });
+        }]);
+        app.controller("ctrl1", ["$scope", "$http", function ($scope, $http) {
+            $http({
+                method: "get",
+                url: "/jsons/test.json",
+                cache: true
+            }).then(function (res) {
+                console.log(res);
+                $scope.data = res.data;
+            }, function (error) {
+                console.log(error);
+            });
+        }]);
+    </script>
+</body>
+</html>

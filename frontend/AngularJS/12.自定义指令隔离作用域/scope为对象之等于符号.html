@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-cloak class="ng-cloak">
+        <div ng-controller="ctrl">
+            <p><input type="text" ng-model="data.name" /></p>
+            <p>{{data.name}}</p>
+            <hr />
+            <p>下面是指令生成的代码</p>
+            <test></test>
+        </div>
+
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.directive("test", function () {
+            return {
+                retrice: "E",
+                replace: true,
+                //注意：user="data",user表示指令的$scope.user,data表示父域的$scope.data
+                template: "<div user=\"data\"><p><input type=\"text\" ng-model=\"user.name\" /></p><p>{{user.name}}</p></div>",
+                scope: {
+                    user:"="//data表示指令的$scope.data,值是取属性data的值(注意：不是取字符串，父域是什么类型就是什么类型)。
+                }
+            };
+        });
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+            $scope.data={name:"red"};
+        }]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-cloak class="ng-cloak">
+    <div class="container" ng-controller="ctrl">
+        {{phone|phoneTruncation:8}}<br />
+        {{phone2|phoneTruncation:4}}
+    </div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.filter("phoneTruncation", function () {
+            console.log("OK");
+            return function (mobile, len) {
+                console.log(len);
+                if (len==undefined)
+                    len = 8;
+                return  mobile.substring(0, mobile.length - len)+new String("*").repeat(len);
+            }
+        });
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+            $scope.phone = "13564222222";
+            $scope.phone2 = "18264222222";
+        }]);
+    </script>
+</body>
+</html>

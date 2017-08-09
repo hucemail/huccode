@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-app="app">
+    <a ui-sref="default">首页</a>
+    <a ui-sref="list({id:1})">列表</a>
+    <div ui-view></div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+    <script>
+        var app = angular.module("app", ["ui.router"]);
+
+        app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
+            $locationProvider.hashPrefix("");
+            $urlRouterProvider.otherwise("/index");
+            $stateProvider
+                .state("default", {
+                    url: "/index",
+                    template: "<h3>首页</h3><button ng-click=\"go('list',{id:10})\">点击跳转List</button>",
+                    controller:"ctrlIndex"
+                })
+                .state("list", {
+                    url: "/list/{id}",
+                    template: "<h3>参数：{{id}}</h3>",
+                    controller:"ctrlList"
+                });
+        }]);
+        app.controller("ctrlIndex", ["$scope", "$state",function ($scope, $state) {
+            $scope.go = function (url,para) {
+                $state.go(url, para);
+            }
+        }]);
+        app.controller("ctrlList", ["$scope", "$state", "$stateParams", function ($scope, $state, $stateParams) {
+            $scope.id = $stateParams.id;
+        }]);
+    </script>
+</body>
+</html>

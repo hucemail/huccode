@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        .odd{
+            color:red;
+        }
+        .even{
+            color:aqua;
+        }
+        .first {
+            color:aquamarine;
+        }
+        .last{
+            color:bisque;
+        }
+        .middle{
+            color:black;
+        }
+    </style>
+</head>
+<body ng-cloak class="ng-cloak">
+    <div class="container" ng-controller="ctrl">
+       <ul>
+           <li ng-repeat="(k,v) in news" ng-class="{'odd':$odd,'even':$even,'first':$first,'last':$last,'middle':$middle}">
+               {{$index}}
+               <strong>[{{k+1}}.{{v.category}}]</strong>
+               <span>{{v.title}}</span>
+               <span>{{v.releaseDate | date:"yyyy-MM-dd HH:mm:ss"}}</span>
+           </li>
+       </ul>
+    </div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+            $scope.news = [
+                {
+                    "category": "最新",
+                    "title": "开服公告",
+                    "releaseDate": 1501641229255,
+                },
+                {
+                    "category": "新闻",
+                    "title": "首推奖励",
+                    "releaseDate": 1501641239255,
+                }
+                ,
+                {
+                    "category": "新闻",
+                    "title": "首推奖励1",
+                    "releaseDate": 1501141239255,
+                }
+                ,
+                {
+                    "category": "新闻",
+                    "title": "首推奖励2",
+                    "releaseDate": 1501641239225,
+                }
+                ,
+                {
+                    "category": "新闻",
+                    "title": "首推奖励3",
+                    "releaseDate": 1501641239255,
+                }
+                 ,
+                {
+                    "category": "新闻",
+                    "title": "首推奖励4",
+                    "releaseDate": 1501641239255,
+                }
+                 ,
+                {
+                    "category": "新闻",
+                    "title": "首推奖励5",
+                    "releaseDate": 1501641239255,
+                }
+                 ,
+                {
+                    "category": "新闻",
+                    "title": "首推奖励6",
+                    "releaseDate": 1501641239255,
+                }
+            ];
+        }]);
+    </script>
+</body>
+</html>

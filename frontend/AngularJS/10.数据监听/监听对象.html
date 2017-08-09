@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-cloak class="ng-cloak">
+    <div class="container" ng-controller="ctrl">
+        <p><input type="text" ng-model="user.username" placeholder="输入用户名" /></p>
+        <p>
+            <input type="password" ng-model="user.password" placeholder="输入密码"/>
+        </p>
+        <p><input type="password" ng-model="user.rePassword" placeholder="请再次输入密码" /></p>
+        <p>{{error}}</p>
+    </div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+            $scope.user = {};
+            $scope.$watch("user", function (n, o) {
+                if (n.password != n.rePassword) {
+                    $scope.error = "两次密码不一致";
+                }
+                else {
+                    $scope.error = "";
+                }
+            }, true);
+        }]);
+    </script>
+</body> 
+</html>

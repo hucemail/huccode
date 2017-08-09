@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-cloak class="ng-cloak">
+    <div class="container" ng-controller="ctrl">
+        {{price|currency:"￥":0}}
+        <br />
+        {{number|number}}
+        <br />
+        {{name|lowercase}}
+        <br />
+        {{name|uppercase}}
+        <br />
+        {{name|limitTo:2:1}}
+        <br />
+        {{releaseDate|date:"yyyy年MM月dd日"}}
+    </div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+            $scope.price = 12.7468;
+            $scope.number = 12.7468;
+            $scope.name = "李Sire";
+            $scope.releaseDate = new Date().getTime();
+        }]);
+    </script>
+</body>
+</html>

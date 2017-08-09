@@ -13,10 +13,10 @@
       <publishTime>06/15/2015 02:06:24</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>08/03/2014 20:33:56</publishTime>
+      <publishTime>03/08/2014 20:33:56</publishTime>
     </File>
     <File Include="bin/Restful-API.dll">
-      <publishTime>07/28/2017 16:05:52</publishTime>
+      <publishTime>08/09/2017 10:32:21</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>06/18/2015 20:19:46</publishTime>
@@ -73,7 +73,7 @@
       <publishTime>07/28/2017 14:11:11</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>07/28/2017 14:57:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>07/28/2017 16:05:52</publishTime>

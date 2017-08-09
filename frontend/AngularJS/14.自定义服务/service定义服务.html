@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-app="app">
+    <div ng-controller="ctrl">
+        {{message}}
+        {{data}}
+    </div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+
+        //数据接口
+        app.constant("DI", {
+            postModel: "http://127.0.0.1:9002/api/test/postmodel",
+            postDynamic: "http://127.0.0.1:9002/api/test/postdynamic"
+        });
+
+        //factory
+        app.service("testProvider", ["$http", "DI", "$timeout", function ($http, DI, $timeout) {
+            this.postModel = function (data, before) {
+                if (typeof before === "function") {
+                    before();
+                }
+                return $http({
+                    method: "post",
+                    url: DI.postModel,
+                    data: data
+                });
+            };
+        }]);
+
+        app.controller("ctrl", ["$scope", "testProvider", function ($scope, testProvider) {
+            $scope.formdata = { id: 1, name: "hh", time: "xxx" };
+
+            testProvider.postModel($scope.formdata, function () {
+                $scope.message ="请求开始";
+            }).then(function (res) {
+                $scope.data = res.data;
+                $scope.message = "请求成功";
+            });
+        }]);
+    </script>
+</body>
+</html>

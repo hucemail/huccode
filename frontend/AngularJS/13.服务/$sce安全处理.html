@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-cloak class="ng-cloak" ng-controller="ctrl">
+    {{data}}
+    <div ng-bind-html="data|trustHtml"></div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.filter("trustHtml", ["$sce", function ($sce) {
+            return function (data) {
+                return $sce.trustAsHtml(data);
+            }
+        }]);
+        app.controller("ctrl", ["$scope", "$http","$sce",function ($scope, $http,$sce) {
+            $scope.data = '<h1>hhh</h1>';
+        }]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-cloak class="ng-cloak">
+    <div class="container" ng-controller="ctrl">
+        <img src="{{user.headPortrait}}" />
+        <img ng-src="{{user.headPortrait}}" />
+    </div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+            $scope.user = {
+                "headPortrait": "http://img.zcool.cn/community/04da9755c80adc000001e6e5de8e7e.jpg@80w_80h_1c_1e_1o_100sh.jpg",
+                "blogAddress": "http://www.baidu.com"
+            }
+        }]);
+    </script>
+</body>
+</html>
+

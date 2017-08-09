@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-cloak class="ng-cloak" ng-controller="ctrl">
+    
+    <ddl-shop-cart ddl-color="red" ddl-font-size="12px"></ddl-shop-cart>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.directive("ddlShopCart", function () {
+            return {
+                restrict:'E',
+                templateUrl: "shopCart.html",
+                replace: true,
+                scope: {},
+                controller: ["$scope", "$http", function ($scope, $http) {
+                    $scope.title = "指令控制器";
+                }],
+                //link函数主要用于操作dom元素,给dom元素绑定事件和监听.  
+                link: function (scope, element, attr, ctrl, linker) {
+                    //scope:指令所在的作用域  
+                    //element：指令元素的封装，可以调用angular封装的简装jq方法和属性  
+                    //attr：指令元素的属性的集合  
+                    //ctrl：用于调用其他指令的方法,指令之间的互相通信使用，需要配合require  
+                    //linker:用于transClude里面嵌入的内容  
+
+                    scope.name = "xxx";
+
+                    console.log(scope.title);
+                    console.log(attr);
+                    element.css("color", attr.ddlColor);
+                }
+            }
+        });
+        app.controller("ctrl", ["$scope", "$http", function ($scope, $http) {
+            $scope.title = "控制器";
+        }]);
+    </script>
+</body>
+</html>

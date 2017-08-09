@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body ng-cloak class="ng-cloak">
+    <div class="container" ng-controller="ctrl">
+        <input type="text" ng-model="keyword" />
+       <ul>
+           <li ng-repeat="v in data">{{v}}</li>
+       </ul>
+    </div>
+    <script src="bundles/js/angular.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("ctrl", ["$scope", "$http", "$filter", function ($scope, $http, $filter) {
+            $scope.data = ["Java", "C#", "C++", "C", "JavaScript", "Ruby", ".net", "asp.net", "android", "swift"];
+            $scope.tmpdata = $scope.data;
+            $scope.$watch("keyword", function (n, o) {
+                $scope.data = $filter("filter")($scope.tmpdata, n);
+            });
+        }]);
+    </script>
+</body> 
+</html>

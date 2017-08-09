@@ -18,7 +18,7 @@ namespace Restful_API
             //Install-Package Microsoft.AspNet.WebApi.Cors
             //config.EnableCors(new EnableCorsAttribute("*", "*", "*"));//允许所有跨域
 
-            var allowOrigins = "http://127.0.0.1:9000";//获取允许访问资源的源。http://www.baidu.com,http://www.taobao.com
+            var allowOrigins = "*";//获取允许访问资源的源。http://www.baidu.com,http://www.taobao.com,http://localhost:10748,http://127.0.0.1:10748
             var allowHeaders = "*";//获取资源支持的标头。
             var allowMethods = "*";//获取资源支持的方法。
             var globalCors = new EnableCorsAttribute(allowOrigins, allowHeaders, allowMethods);
