@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        canvas{
+            border:1px solid red;
+           background-color:#ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800" height="500" id="canvas"></canvas>
+    <script>
+        //获得画布
+        var cv = document.getElementById("canvas").getContext("2d");
+        cv.strokeStyle = "red";
+        cv.lineWidth = 10;
+
+        //开启绘制路径
+        cv.beginPath();
+        //设置起始点,画笔的点此时是（100，100）
+        cv.moveTo(100, 100);
+        //设置线条终点,画笔的点此时是（100，400）
+        cv.lineTo(100, 400);
+        //设置线条终点,画笔的点此时是（400，400）
+        cv.lineTo(400, 400);
+        //闭合路径,此时会将起始点和画笔所在的点连接起来，（100，100）连接（400，400）
+        cv.closePath();
+
+        //绘制线条，最终画笔会根据上面设置的这些点的顺序进行连接,形成一个三角形
+        cv.stroke();
+    </script>
+</body>
+</html>

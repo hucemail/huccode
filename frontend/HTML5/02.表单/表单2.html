@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <form action="" id="register-form">
+        下拉选择框： <input type="text" list="detail" /><br /><br />
+        <datalist id="detail">
+            <option value="上海交通">上海交通</option>
+            <option value="上海天气">上海天气</option>
+            <option value="北京交通">北京交通</option>
+            <option value="北京天气">北京天气</option>
+        </datalist>
+        自动获得焦点：<input type="text" autofocus="on" /><br /><br />
+        提示文字：<input type="text" placeholder="这是提示文字"/><br /><br />
+        不能为空：<input type="text" placeholder="必须填写" required /><br /><br />
+        验证码：<input type="text" placeholder="必须是四位纯数字" pattern="\d{4}" required /><br /><br />
+        多文件选择：<input type="file" placeholder="多文件选择" multiple /><br /><br />
+        <input type="submit" value="提交注册" />
+    </form>
+    邮箱：<input type="email" form="register-form" />它属于register-form表单，但是它可以在表单外面
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        canvas{
+            border:1px solid red;
+           background-color:#ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800" height="500" id="canvas"></canvas>
+    <script>
+        var cv = document.getElementById("canvas");
+        //获得画布
+        var context = cv.getContext("2d");
+        //绘制填充矩形
+        context.fillStyle = "#00ff90";
+        context.fillRect(200, 100, 300, 300);
+        context.clearRect(300, 200, 100, 100);
+       
+
+        //绘制线条矩形
+        //context.strokeStyle = "#00ff90";
+        //context.lineWidth = "10";
+        //context.strokeRect(200, 100, 300, 300);
+    </script>
+</body>
+</html>
