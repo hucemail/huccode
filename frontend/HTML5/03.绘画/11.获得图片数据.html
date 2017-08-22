@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        canvas{
+            border:1px solid red;
+           background-color:#272822;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="1000" height="500" id="canvas"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var cv = canvas.getContext("2d");
+        var img = new Image();
+        //解决canvas跨域,否则getImageData会出错
+        img.crossOrigin = "";
+        img.src = "http://data.ddianle.com/ResourceDirectories/QMLA/upload/20170703/e4021391-135b-437b-b0d3-f03eeabf9da7.jpg";
+        img.onload = function () {
+            cv.drawImage(img, 250, 100);
+
+            //获取和写入图片数据
+            var allData = cv.getImageData(250, 100, 100, 100);
+            console.log(allData);
+            cv.putImageData(allData, 0, 0);
+
+            //将canvas转为base64
+            console.log(canvas.toDataURL("image/png"));
+        }
+    </script>
+</body>
+</html>
+

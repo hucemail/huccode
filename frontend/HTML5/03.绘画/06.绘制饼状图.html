@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        canvas {
+            border: 1px solid red;
+            background-color: #272822;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="1000" height="500" id="canvas"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var cv = canvas.getContext("2d");
+        radian("red", 0, 80);
+        radian("green", 80, 180);
+        radian("#ffabab", 180, 200);
+        radian("#9c27b0", 200, 360);
+        function radian(color,startAngle,endAngle)
+        {
+            cv.beginPath();
+            cv.fillStyle = color;
+            cv.moveTo(500, 250);
+            cv.arc(500, 250, 200, startAngle * Math.PI / 180, endAngle * Math.PI / 180);
+            cv.fill();
+            cv.closePath();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        canvas{
+            border:1px solid red;
+           background-color:#272822;
+        }
+    </style>
+</head>
+<body>
+    <form action="/">
+        <input type="color" id="color" value="#ff0000" />
+        <input type="range" value="1" min="1" max="20" id="penWidth" />
+        <button id="rubber">橡皮檫</button>
+    </form>
+    <canvas width="1000" height="500" id="canvas"></canvas>
+    <script> 
+        var canvas = document.getElementById("canvas");
+        var cv = canvas.getContext("2d");
+        var color = document.getElementById("color");
+        var penWidth = document.getElementById("penWidth");
+        var rubber = document.getElementById("rubber");
+        //改变画笔颜色
+        color.onchange = function () {
+            cv.strokeStyle = this.value;
+            console.log(this.value);
+        }
+        //改变画笔粗细
+        penWidth.onchange = function () {
+            cv.lineWidth = this.value;
+            console.log(this.value);
+        }
+        //橡皮檫
+        rubber.onclick = function () {
+            alert("现在是橡皮檫状态。。。");
+            cv.strokeStyle = "#272822";
+            return false;
+        }
+        //初始画笔状态
+        cv.strokeStyle = color.value;
+        cv.lineWidth = penWidth.value;
+        //画图逻辑
+        canvas.onmousedown = function (e) {
+            cv.beginPath();
+            //如果window.event是null、undefined或者空字符串，就将e赋值给ev
+            var ev = window.event || e;
+            console.log(ev);
+            //获得鼠标相对于事件源元素的X,Y坐标
+            var m_start_y = ev.layerY || ev.offsetY;
+            var m_start_x = ev.layerX || ev.offsetX;
+            cv.moveTo(m_start_x, m_start_y);
+
+            canvas.onmousemove = function (e)
+            {
+                var ev = window.event || e;
+                var m_start_y = ev.layerY || ev.offsetY;
+                var m_start_x = ev.layerX || ev.offsetX;
+                cv.lineTo(m_start_x, m_start_y);
+                cv.stroke();
+            }
+        }
+        canvas.onmouseup = function () {
+            this.onmousemove = null;
+        }
+    </script>
+</body>
+</html>
+

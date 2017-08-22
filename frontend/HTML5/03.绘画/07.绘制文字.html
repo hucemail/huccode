@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        canvas{
+            border:1px solid red;
+           background-color:#272822;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="1000" height="500" id="canvas"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var cv = canvas.getContext("2d");
+        //绘制X和Y轴,方便观察绘制文字时的属性。轴心：（500，250）
+        cv.beginPath();
+        cv.strokeStyle = "white";
+        cv.moveTo(0, 250);
+        cv.lineTo(1000, 250);
+        cv.stroke();
+        cv.closePath();
+        cv.beginPath();
+        cv.strokeStyle = "white";
+        cv.moveTo(500, 0);
+        cv.lineTo(500, 500);
+        cv.stroke();
+        cv.closePath();
+        //绘制文字
+        var str = "我是需要绘制的文字";
+        cv.font = "34px 微软雅黑";
+        console.log(cv.measureText(str).width);//获取这段文字绘制所需要的宽度,它会根据font设置的文字大小自动计算
+        cv.strokeStyle = "red";
+        cv.textAlign = "center";//水平居中对齐
+        cv.textBaseline = "middle";//垂直居中
+        //还有第四个参数，它表示允许绘制的宽度，宽度不够文字会被挤压
+        cv.strokeText(str, 500, 250);
+    </script>
+</body>
+</html>
+

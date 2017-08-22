@@ -66,6 +66,90 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "03.绘画", "03.绘画\", "
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "04.音视频", "04.音视频\", "{1C5E8ABE-D128-46E3-BD6A-C9389BE5B1C5}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_12677"
+		Debug.AspNetCompiler.PhysicalPath = "04.音视频\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_12677\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_12677"
+		Release.AspNetCompiler.PhysicalPath = "04.音视频\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_12677\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "12677"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "05.web存储", "05.web存储\", "{96B45A0E-8BE0-41F6-B52A-42919088BF71}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_1684"
+		Debug.AspNetCompiler.PhysicalPath = "05.web存储\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1684\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_1684"
+		Release.AspNetCompiler.PhysicalPath = "05.web存储\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1684\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1684"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "06.SVG", "06.SVG\", "{565AB9F5-901D-4F4D-821F-6EA03EB6B443}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_4948"
+		Debug.AspNetCompiler.PhysicalPath = "06.SVG\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4948\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_4948"
+		Release.AspNetCompiler.PhysicalPath = "06.SVG\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4948\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4948"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "07.服务器推送", "07.服务器推送\", "{DF15D669-F348-44C8-A993-7305BF135393}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_24349"
+		Debug.AspNetCompiler.PhysicalPath = "07.服务器推送\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_24349\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_24349"
+		Release.AspNetCompiler.PhysicalPath = "07.服务器推送\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_24349\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "24349"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +161,14 @@ Global
 		{F0E8DF55-A978-4F46-B6A7-7392A5D43A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3A97C56-610E-43AE-A924-BAA95D064D69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D3A97C56-610E-43AE-A924-BAA95D064D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C5E8ABE-D128-46E3-BD6A-C9389BE5B1C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C5E8ABE-D128-46E3-BD6A-C9389BE5B1C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B45A0E-8BE0-41F6-B52A-42919088BF71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B45A0E-8BE0-41F6-B52A-42919088BF71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{565AB9F5-901D-4F4D-821F-6EA03EB6B443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{565AB9F5-901D-4F4D-821F-6EA03EB6B443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF15D669-F348-44C8-A993-7305BF135393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF15D669-F348-44C8-A993-7305BF135393}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

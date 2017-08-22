@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        canvas{
+            border:1px solid red;
+           background-color:#ccc;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="800" height="500" id="canvas"></canvas>
+    <script>
+        //获得画布
+        var cv = document.getElementById("canvas").getContext("2d");
+        cv.strokeStyle = "red";
+        cv.lineWidth = 20;
+        //第一条线
+        cv.beginPath();
+        cv.moveTo(30, 30);
+        cv.lineTo(30, 400);
+        cv.stroke();
+        cv.save();//保存画笔状态（存档），即画笔颜色和线条大小
+        //第二条线
+        cv.beginPath();
+        cv.strokeStyle = "green";
+        cv.lineWidth = 10;
+        cv.moveTo(30, 400);
+        cv.lineTo(300, 400);
+        cv.stroke();
+        cv.save();//再次存档
+        //第三条线
+        cv.beginPath();
+        cv.restore();//第一次恢复是绿色
+        cv.restore();//第二次恢复是红色
+        cv.moveTo(300, 400);
+        cv.lineTo(300, 30);
+        cv.stroke();
+    </script>
+</body>
+</html>

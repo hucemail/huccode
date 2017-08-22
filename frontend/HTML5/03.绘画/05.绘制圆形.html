@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        canvas{
+            border:1px solid red;
+           background-color:#272822;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="1000" height="500" id="canvas"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var cv = canvas.getContext("2d");
+        cv.fillStyle = "red";
+        /*
+        参数一：起始点x坐标
+        参数二：起始点y坐标
+        参数三：圆半径
+        参数四：圆弧起始点弧度
+        参数五：圆弧结束点弧度
+        参数六：顺时针还是逆时针
+
+        角度转弧度计算公式：弧度=角度*PI/180）
+        */
+        cv.arc(500, 250, 100, 0 * Math.PI / 180, 360 * Math.PI / 180, true);
+        cv.fill();
+    </script>
+</body>
+</html>
+

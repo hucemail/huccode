@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        canvas{
+            border:1px solid red;
+           background-color:#272822;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="1000" height="500" id="canvas"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var cv = canvas.getContext("2d");
+        var img = new Image();
+        img.src = "https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=286704735,1295746168&fm=58";
+        img.onload = function () {
+            //第二个参数有:repeat、repeat-x、repeat-y、no-repeat
+            var cp = cv.createPattern(this, "repeat");
+            cv.fillStyle = cp;
+            cv.fillRect(0, 0, 1000, 500);
+        }
+    </script>
+</body>
+</html>
+

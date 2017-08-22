@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        svg {
+            border: 1px solid red;
+            margin-left: 300px;
+            width: 100px;
+            height: 100px;
+            background-color:#2d7d8b;
+        }
+    </style>
+</head>
+<body>
+    <svg>
+        <circle r="20" fill="none" cx="50" cy="50" style="stroke:rgba(255, 255, 255, 0.20);stroke-width:2;"></circle>
+        <!--stroke-dasharray：设置为圆周长2πr  stroke-dashoffset：慢慢递减从圆周长减到0-->
+        <circle r="20" fill="none" cx="50" cy="50" style="stroke:white;stroke-width:2; stroke-dasharray: 125; stroke-dashoffset: 125;" id="progress"></circle>
+    </svg>
+    <script>
+        var progress = document.getElementById("progress");
+        var totalProgress = progress.style.strokeDashoffset;
+        var currentProgress = 0;
+        setInterval(function () {
+            currentProgress = progress.style.strokeDashoffset;
+            if (currentProgress <= 0) {
+                currentProgress = totalProgress;
+            }
+            else {
+                currentProgress -= 1;
+            }
+            progress.style.strokeDashoffset = currentProgress;
+        },100);
+    </script>
+</body>
+</html>

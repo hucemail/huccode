@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <input type="text" placeholder="key" id="key" />
+    <button id="getitem">获取数据</button>
+    <script>
+        document.getElementById("getitem").onclick = function () {
+            var key = document.getElementById("key").value;
+            alert("值：" + localStorage.getItem(key));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <input type="text" placeholder="key" id="key" />
+    <input type="text" placeholder="value" id="value" />
+    <button id="save">保存数据</button>
+    <script>
+        window.onload = function () {
+            if (typeof(Worker) !== "undefined") {   alert("支持HTML5");   }   else {   alert("不支持HTML5");   }  
+        }
+        document.getElementById("save").onclick = function () {
+            var key = document.getElementById("key").value;
+            var value = document.getElementById("value").value;
+            localStorage.setItem(key, value);
+            alert("存储成功");
+        }
+    </script>
+</body>
+</html>

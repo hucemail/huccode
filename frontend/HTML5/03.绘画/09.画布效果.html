@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        canvas{
+            border:1px solid red;
+           background-color:#272822;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="1000" height="500" id="canvas"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var cv = canvas.getContext("2d");
+        //中心点
+        var centerPoint = { x: 500, y: 250 };
+        //绘制x和y轴
+        cv.beginPath();
+        cv.strokeStyle = "white";
+        cv.moveTo(0, centerPoint.y);
+        cv.lineTo(centerPoint.x*2, centerPoint.y);
+        cv.stroke();
+        cv.closePath();
+        cv.beginPath();
+        cv.strokeStyle = "white";
+        cv.moveTo(centerPoint.x, 0);
+        cv.lineTo(centerPoint.x, centerPoint.y*2);
+        cv.stroke();
+        cv.closePath();
+        //缩放前矩形
+        cv.strokeStyle = "red";
+        cv.save();
+        cv.strokeRect(centerPoint.x - 50, centerPoint.y - 50, 100, 100);
+        //将画布中心点移至左上角起点
+        cv.translate(-centerPoint.x, -centerPoint.y);
+        //x和y轴都放大一倍
+        cv.scale(2, 2);
+        cv.strokeRect(centerPoint.x - 50, centerPoint.y - 50, 100, 100);
+        cv.restore();
+    </script>
+</body>
+</html>
+
