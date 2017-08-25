@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        p{ 
+            /*选择所有p标签*/
+        }
+        #hc p{
+            /*选择id是hc下的所有p标签(后代元素)*/
+        }
+        #hc>p{
+            /*选择id是hc下的所有p标签(子元素)*/
+        }
+        #one~p{
+            /*选择和id是one同级但是在one后面的p标签（同级）*/
+        }
+         #one+p{
+            /*选择紧随id是one的p标签（同级）*/
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="hc">
+        <p>天王盖地虎1</p>
+        <p>天王盖地虎2</p>
+        <p>天王盖地虎3</p>
+        <p id="one">天王盖地虎4</p>
+        <p>天王盖地虎5</p>
+        <div>
+            <p>天王盖地虎6</p>
+            <p>天王盖地虎7</p>
+            <p>天王盖地虎8</p>
+            <p>天王盖地虎9</p>
+        </div>
+        <span>xxxxx</span>
+        <p>天王盖地虎10</p>
+    </div>
+</body>
+</html>

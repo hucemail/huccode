@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        .big{
+             width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            border:1px solid red;
+        }
+        .child {
+            background-color: hotpink;
+            width: 200px;
+            height: 200px;
+            transition:margin-left 2s;
+        }
+            .big:hover .child{
+                margin-left:200px;
+            }
+    </style>
+</head>
+<body>
+    <div class="big">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

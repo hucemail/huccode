@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: lightcoral;
+            margin-left:200px;
+             /*我的父元素是body*/
+            position:relative;
+            left:0px;
+            top:20px;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+            margin-left:100px;
+            /*我的父元素是container*/
+            position:absolute;
+            left:0px;
+        }
+
+        p {
+            background-color: #808080;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://ss2.baidu.com/73Z1bjeh1BF3odCf/it/u=1258724594,1776157619&fm=202" />
+        </div>
+        <p>我是段落标签</p>
+    </div>
+    <p>我是段落标签</p>
+</body>
+</html>

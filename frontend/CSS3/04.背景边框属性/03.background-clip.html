@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #2fff1b;
+            border: dotted 10px #FF6FA4;
+            float: left;
+            margin-left: 10px;
+            padding: 10px;
+        }
+
+        .div1 {
+            background-clip: content-box;
+        }
+
+        .div2 {
+            background-clip: padding-box;
+        }
+
+        .div3 {
+            background-clip: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="">默认</div>
+    <div class="div1">content-box</div>
+    <div class="div2">padding-box</div>
+    <div class="div3">border-box</div>
+</body>
+</html>

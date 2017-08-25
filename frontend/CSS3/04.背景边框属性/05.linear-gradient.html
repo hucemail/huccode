@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width:600px;
+            height:100px;
+            margin:0 auto;
+            /*
+                参数一：从上面位置开始渐变，有：to left，to right，to left top等等
+                参数N：渐变颜色
+            */
+            background: linear-gradient(to left top, red,green,#ff6a00);
+        }
+        div:hover{
+             background: linear-gradient(to left top,#ff6a00 ,green,red);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

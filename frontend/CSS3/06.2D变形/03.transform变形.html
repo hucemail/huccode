@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        .big {
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid red;
+            line-height: 400px;
+        }
+
+        .child {
+            background-color: hotpink;
+            width: 20px;
+            height: 150px;
+            display: inline-block;
+            transition:transform 1s;
+        }
+
+        .big:hover  .child{
+           -webkit-transform:rotate(360deg);
+           /*水平缩放，垂直缩放*/
+           -webkit-transform:scale(2,1.2);
+           /*水平平移，垂直平移*/
+           -webkit-transform:translate(0px,50px);
+           /*水平角度，垂直角度*/
+           -webkit-transform:skew(0deg,60deg);
+           /*多个动画用空格隔开*/
+            -webkit-transform:rotate(360deg) scale(2,1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="big">
+        <div class="child"></div>
+    </div>
+</body>
+</html>

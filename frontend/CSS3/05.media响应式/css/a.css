@@ -1,0 +1,72 @@
+﻿    * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background-color: #f6f6f6;
+        }
+
+        .top_ad {
+            height: 70px;
+            background-color: #000000;
+        }
+
+            .top_ad > a {
+                display: block;
+                width: 990px;
+                height: 100%;
+                margin: 0 auto;
+                background: url("https://aecpm.alicdn.com/simba/img/TB1xlWsXEUIL1JjSZFrSuv3xFXa.jpg") no-repeat center center;
+            }
+
+        .shortcut {
+            height: 30px;
+            background-color: #e3e4e5;
+        }
+
+            .shortcut > div {
+                border-left: 1px solid red;
+                border-right: 1px solid red;
+                width: 990px;
+                height: 100%;
+                margin: 0 auto;
+            }
+
+                .shortcut > div .right {
+                    background-color: #00ff21;
+                    width: 70%;
+                    height: 100%;
+                    float: right;
+                }
+
+        .search{
+            height: 100px;
+            width: 990px;
+            margin: 0 auto;
+            background-color: #f69090;
+        }
+        .container {
+            height: 400px;
+            width: 990px;
+            margin: 0 auto;
+            border:1px solid red;
+        }
+        .container>.left {
+             width: 200px;
+             height:100%;
+             float:left;
+             background-color:#808080;
+        }
+        .container>.right {
+             width: 200px;
+             height:100%;
+             float:left;
+             background-color:#808080;
+        }
+        .container>.center {
+             width: 590px;
+             height:100%;
+             float:left;
+             background-color:#ffd800;
+        }

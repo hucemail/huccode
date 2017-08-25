@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .container {
+            width: 180px;
+            height: 150px;
+            border: 1px solid red;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        p {
+            padding-top: 10px;
+            font-size: 14px;
+        }
+
+        .sprint {
+            height: 75px;
+            width: 75px;
+            background: url("https://img.alicdn.com/tps/TB1heGZLXXXXXaeapXXXXXXXXXX-150-9000.jpg") no-repeat center center;
+            background-position-x: 0px;
+            background-position-y: 0px;
+            margin: 0 auto;
+            background-size: cover; /*横向铺满*/
+            transition: background-position-y 2s steps(55, start);
+        }
+        .container:hover .sprint{
+           background-position-y: -4125px;
+        }
+        /*.container:hover .sprint{
+            animation:run1 2s steps(55, start);
+            animation-fill-mode:both;
+        }
+        @keyframes run1{
+            0%{
+                 background-position-y: -0px;
+            }
+            100%{
+                 background-position-y: -4125px;
+            }
+        }*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sprint"></div>
+        <h3>网站建设</h3>
+        <p>
+            <a href="javascript:;">网站模板</a>
+            <a href="javascript:;">网站模板</a>
+            <a href="javascript:;">网站模板</a>
+        </p>
+    </div>
+</body>
+</html>

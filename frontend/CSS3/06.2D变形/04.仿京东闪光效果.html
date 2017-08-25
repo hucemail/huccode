@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        button {
+            padding: 10px 30px;
+            background-color: #df3033;
+            border: 1px solid #df3033;
+            color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            overflow:hidden;
+            position: relative;
+        }
+
+        .flash {
+            position: absolute;
+            top: -100px;
+            left: 68px;
+            width: 5px;
+            background: linear-gradient(to left,transparent,white,transparent);
+            transform: rotate(72deg);/*根据三角形公式计算倾斜角度*/
+            height: 150px;/*根据三角形公式计算斜边长*/
+        }
+
+        button:hover .flash{
+            top:-3px;
+            transition:top 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <button>
+        立即抢购
+        <div class="flash"></div>
+    </button>
+    <button>
+        立即预约
+        <div class="flash"></div>
+    </button>
+    <br />
+    dsadsadsa
+</body>
+</html>

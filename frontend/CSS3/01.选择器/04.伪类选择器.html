@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+      p:first-letter{
+          /*p标签里的第一个字符*/
+          font-size:24px;
+      }
+      p:first-line{
+          /*p标签里的第一个字符*/
+      }
+       p::before{
+          /*在p标签头部添加content的内容*/
+          content:"66";
+      }
+      p::after{
+          /*在p标签末尾添加content的内容*/
+          content:"66";
+      }
+    </style>
+</head>
+<body>
+    <div id="hc">
+        <p class="java">天王盖地虎1</p>
+        <p class="dotnet">天王盖地虎2</p>
+        <p class="javascript">天王盖地虎3</p>
+        <p class="angularjs">天王盖地虎4</p>
+        <p>天王盖地虎5</p>
+        <div>
+            <p class="java">天王盖地虎2</p>
+            <p class="dotnet">天王盖地虎7</p>
+            <p class="javascript">天王盖地虎8</p>
+            <p class="angularjs">天王盖地虎9</p>
+            <p>天王盖地虎10</p>
+        </div>
+        <span>xxxxx</span>
+        <p>天王盖地虎11</p>
+        <p></p>
+    </div>
+</body>
+</html>

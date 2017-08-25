@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+       :root{
+           /*选择了html节点*/
+       }
+       p:empty{
+           /*选择空的p标签(里面有空格都不算是空标签)*/
+       }
+       div:target{
+           /*当前活动的div标签(在url后加上#hd可以看到效果)*/
+       }
+       p:not(.java){
+           /*选择class不是java的p标签*/
+       }
+       ::selection{
+           /*用户选中部分的元素*/
+           background-color:#4cff00;
+           color:white;
+       }
+    </style>
+</head>
+<body>
+    <div id="hc">
+        <p class="java">天王盖地虎1</p>
+        <p class="dotnet">天王盖地虎2</p>
+        <p class="javascript">天王盖地虎3</p>
+        <p class="angularjs">天王盖地虎4</p>
+        <p>天王盖地虎5</p>
+        <div>
+            <p class="java">天王盖地虎2</p>
+            <p class="dotnet">天王盖地虎7</p>
+            <p class="javascript">天王盖地虎8</p>
+            <p class="angularjs">天王盖地虎9</p>
+            <p>天王盖地虎10</p>
+        </div>
+        <span>xxxxx</span>
+        <p>天王盖地虎11</p>
+        <p></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .pagination {
+            border: 1px solid red;
+            /*对pagin进行水平和垂直居中*/
+            text-align:center;
+            line-height:40px;
+        }
+
+        .pagin {
+            border: 1px solid red;
+            /*
+                1. 因为li浮动之后虽然是内联块状元素，但是还是不能使用text-align来设置水平居中
+                2. 所以就将整个ul设置为内联块状元素，在通过ul的父元素对它进行水平和垂直居中
+            */
+            display:inline-block;
+            vertical-align:middle;
+        }
+
+            .pagin li {
+                float: left;
+                list-style: none;
+            }
+
+            .pagin a {
+                font-size: 14px;
+                text-decoration: none;
+                border: 1px solid #808080;
+                padding: 7px 15px;
+            }
+    </style>
+</head>
+<body>
+    <div class="pagination">
+        <ul class="pagin">
+            <li>
+                <a href="javascript:;">首页</a>
+            </li>
+            <li>
+                <a href="javascript:;">上一页</a>
+            </li>
+            <li>
+                <a href="javascript:;">1</a>
+            </li>
+            <li>
+                <a href="javascript:;">2</a>
+            </li>
+            <li>
+                <a href="javascript:;">3</a>
+            </li>
+            <li>
+                <a href="javascript:;">4</a>
+            </li>
+            <li>
+                <a href="javascript:;">5</a>
+            </li>
+            <li>
+                <a href="javascript:;">6</a>
+            </li>
+            <li>
+                <a href="javascript:;">7</a>
+            </li>
+            <li>
+                <a href="javascript:;">8</a>
+            </li>
+            <li>
+                <a href="javascript:;">9</a>
+            </li>
+            <li>
+                <a href="javascript:;">...</a>
+            </li>
+            <li>
+                <a href="javascript:;">下一页</a>
+            </li>
+            <li>
+                <a href="javascript:;">尾页</a>
+            </li>
+        </ul>
+    </div>
+    <p>hhhhhhhh</p>
+</body>
+</html>

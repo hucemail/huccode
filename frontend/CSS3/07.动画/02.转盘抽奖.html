@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        @keyframes xuanzhuan{
+            0%{
+                transform:rotate(0deg);
+            }
+            100%{
+                transform:rotate(360deg);
+            }
+        }
+       .choujiang{
+           width:480px;
+           height:480px;
+           border:1px solid red;
+           margin:0 auto;
+           border-radius:480px;
+           position:relative;
+       }
+       .choujiang>.anniu{
+           position:absolute;
+           top:133px;
+           left:181px;
+       }
+    </style>
+</head>
+<body>
+    <div class="choujiang">
+        <img src="dropkick.jpg" class="zhuanpan" />
+        <a href="javascript:;" class="anniu" id="anniu">
+            <img src="start.png" />
+        </a>
+    </div>
+    <script>
+        var zhuanpan = document.getElementsByClassName("zhuanpan")[0];
+        document.getElementById("anniu").onclick = function () {
+            zhuanpan.style.animation = "xuanzhuan 0.5s infinite linear";
+            setTimeout(function () {
+                zhuanpan.style.animationPlayState = "paused";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
