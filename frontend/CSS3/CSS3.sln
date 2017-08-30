@@ -231,6 +231,111 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "11.swiper框架", "11.swipe
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "12.微场景", "12.微场景\", "{553CB8EB-3925-447A-BB0A-B13B1C383F31}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_44918"
+		Debug.AspNetCompiler.PhysicalPath = "12.微场景\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_44918\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_44918"
+		Release.AspNetCompiler.PhysicalPath = "12.微场景\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_44918\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "44918"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "13.flex布局", "13.flex布局\", "{43D336E2-07E3-4251-8BB7-F48530A10931}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_26764"
+		Debug.AspNetCompiler.PhysicalPath = "13.flex布局\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_26764\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_26764"
+		Release.AspNetCompiler.PhysicalPath = "13.flex布局\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_26764\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "26764"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "14.阿里矢量图", "14.阿里矢量图\", "{C790637B-5D02-46D0-8495-F605182D1A83}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_35469"
+		Debug.AspNetCompiler.PhysicalPath = "14.阿里矢量图\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_35469\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_35469"
+		Release.AspNetCompiler.PhysicalPath = "14.阿里矢量图\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_35469\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "35469"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "15.页面加载进度", "15.页面加载进度\", "{B075E180-A054-496C-9C80-76153D1A5172}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_39051"
+		Debug.AspNetCompiler.PhysicalPath = "15.页面加载进度\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_39051\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_39051"
+		Release.AspNetCompiler.PhysicalPath = "15.页面加载进度\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_39051\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "39051"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "16.wowjs", "16.wowjs\", "{45FFF466-E470-45DD-9A65-DD8E66A8C9E9}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54980"
+		Debug.AspNetCompiler.PhysicalPath = "16.wowjs\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54980\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54980"
+		Release.AspNetCompiler.PhysicalPath = "16.wowjs\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54980\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54980"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -258,6 +363,16 @@ Global
 		{368116B4-31B2-4EA8-AA1B-51C6EC48585B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8FD8A8F-3C7F-4FD7-9E76-92AF76861FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F8FD8A8F-3C7F-4FD7-9E76-92AF76861FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{553CB8EB-3925-447A-BB0A-B13B1C383F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{553CB8EB-3925-447A-BB0A-B13B1C383F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D336E2-07E3-4251-8BB7-F48530A10931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D336E2-07E3-4251-8BB7-F48530A10931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C790637B-5D02-46D0-8495-F605182D1A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C790637B-5D02-46D0-8495-F605182D1A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B075E180-A054-496C-9C80-76153D1A5172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B075E180-A054-496C-9C80-76153D1A5172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45FFF466-E470-45DD-9A65-DD8E66A8C9E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45FFF466-E470-45DD-9A65-DD8E66A8C9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

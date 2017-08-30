@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        .container{
+            width:600px;
+            border:1px solid red;
+            margin:0 auto;
+            /*设置flex布局*/
+            display:flex;
+            /*切换主轴,它有四个属性:默认row、row-reverse、cloumn、cloumn-reverse*/
+            flex-direction:row-reverse;
+        }
+        .container>div{
+            width:200px;
+            height:200px;
+            background-color:#b6ff00;
+            border:1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>

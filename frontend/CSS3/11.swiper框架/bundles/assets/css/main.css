@@ -1,0 +1,133 @@
+﻿html, body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background-color: #060d27;
+    color: white;
+    position: relative;
+}
+/*音乐区域*/
+.musical {
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+    .musical > .musical-note {
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .musical > .musical-pic {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        z-index: 1;
+        animation: play-musical 1.5s linear infinite;
+    }
+
+@keyframes play-musical {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/*停止播放*/
+.musical.musical-stop > .musical-note {
+    display: none;
+}
+
+.musical.musical-stop > .musical-pic {
+    animation: none;
+}
+/*音乐区域*/
+/*头部图片*/
+.top-image {
+    width: 80%;
+    height: 15%;
+    margin: 0 auto;
+    overflow:hidden;
+}
+
+    .top-image img {
+        width: 100%;
+    }
+/*头部图片*/
+
+/*底部图片*/
+.left-bottom-image{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:15%;
+    height:10%;
+}
+.right-bottom-image{
+    position:absolute;
+    right:0;
+    bottom:0;
+   width:15%;
+    height:10%;
+}
+/*底部图片*/
+
+
+/*第一屏*/
+.slide1 h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+.slide1 h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top:5%;
+}
+.slide1 .left-stars {
+    width: 15vw;
+    position: absolute;
+    top: 22%;
+    left: 10%;
+}
+
+.slide1 .right-stars {
+    width: 10vw;
+    position: absolute;
+    top: 42%;
+    right: 10%;
+}
+
+.slide1 .yqh {
+    display:block;
+    margin:0 auto;
+}
+.slide1 .bottom{
+    padding-top:5%;
+    text-align:center;
+}
+/*第一屏*/
