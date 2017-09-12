@@ -150,6 +150,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "07.辅助类", "07.辅助�
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "08.组件", "08.组件\", "{E541D459-BA10-4EC5-BE29-AF32E722D58F}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_3029"
+		Debug.AspNetCompiler.PhysicalPath = "08.组件\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3029\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_3029"
+		Release.AspNetCompiler.PhysicalPath = "08.组件\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3029\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3029"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -169,6 +190,8 @@ Global
 		{E56268D9-8EE6-4E19-BD35-C1FBA4FC9AEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD9CCC09-1148-47A5-8496-DAFFF56E6478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AD9CCC09-1148-47A5-8496-DAFFF56E6478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E541D459-BA10-4EC5-BE29-AF32E722D58F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E541D459-BA10-4EC5-BE29-AF32E722D58F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
