@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <style>
+        html, body {
+            background-color: #f1eeee;
+        }
+
+        .container {
+            padding-top: 15px;
+            border: 1px solid red;
+            background-color: white;
+            min-height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--navbar navbar-default将会创建一个导航条-->
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <!--navbar-toggle collapsed当屏幕宽度是移动设备将出现这个按钮-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-items">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--navbar-brand放置LOGO-->
+                <a class="navbar-brand" href="#">
+                    <img src="https://image.freepik.com/free-icon/apple-logo_318-40184.jpg" style="height:100%;" />
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="nav-items">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="javascript:;">课程</a></li>
+                    <li><a href="javascript:;">实战</a></li>
+                    <li><a href="javascript:;">高手指路</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div class="form-group has-feedback navbar-form">
+                            <input type="text" placeholder="搜索课程" class="form-control" />
+                        </div>
+                    </li>
+                    <li><a href="javascript:;"><i class="glyphicon glyphicon-user"></i>个人中心</a></li>
+                    <li><a href="javascript:;"><i class="glyphicon glyphicon-option-vertical"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+</body>
+</html>

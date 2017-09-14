@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <style>
+        html, body {
+            background-color: #f1eeee;
+        }
+        .news{
+            padding:15px;
+        }
+        .container {
+            padding-top:15px;
+            border: 1px solid red;
+            background-color: white;
+            min-height:500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <nav>
+           <ul class="nav nav-tabs nav-justified">
+               <li class="active">
+                   <a href="javascript:;">Java</a>
+               </li>
+               <li>
+                   <a href="javascript:;">NET</a>
+               </li>
+               <li>
+                   <a href="javascript:;">Python</a>
+               </li>
+               <li>
+                   <a href="javascript:;">C++</a>
+               </li>
+           </ul>
+       </nav>
+        <div class="news">
+           <article class="show">
+               Hello Java!
+           </article>
+            <article class="hide">
+                Hello NET!
+            </article>
+            <article class="hide">
+                Hello Python!
+            </article>
+            <article class="hide">
+                Hello C++!
+            </article>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            $(".nav li").click(function () {
+                $(".nav li").removeClass("active");
+                $(this).addClass("active");
+                $(".news article").removeClass("show").addClass("hide");
+                $(".news article").eq($(this).index()).addClass("show");
+            });
+        });
+    </script>
+</body>
+</html>

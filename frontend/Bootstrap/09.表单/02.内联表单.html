@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <style>
+        html, body, .container {
+            background-color: #f1eeee;
+        }
+
+        .form-container {
+            border: 1px solid red;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-8 col-md-offset-2 form-container">
+            <h3 class="page-header text-center">用户信息</h3>
+            <form action="" class="form-inline">
+                <div class="form-group">
+                    <label>账号：</label>
+                    <input type="text" placeholder="请输入你的注册账号" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>密码：</label>
+                    <input type="password" placeholder="设置你的登录密码" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>昵称：</label>
+                    <input type="text" placeholder="请填写你的昵称" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>期望进入：</label>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="0" />阿里
+                        </label>
+                        <label>
+                            <input type="checkbox" value="1" />腾讯
+                        </label>
+                        <label>
+                            <input type="checkbox" value="2" />百度
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>期望薪资：</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" value="0" name="salary" />3K-5K
+                        </label>
+                        <label>
+                            <input type="radio" value="1" name="salary" />6K-8K
+                        </label>
+                        <label>
+                            <input type="radio" value="2" name="salary" />9K-15K
+                        </label>
+                    </div>
+                </div>
+                <p class="divider"></p>
+                <div class="form-group text-center">
+                    <input type="submit" value="立即修改" class="btn btn-primary" />
+                    <input type="reset" value="重新填写" class="btn btn-danger" />
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <style>
+        html, body, .container {
+            background-color: #f1eeee;
+        }
+
+        .form-container {
+            border: 1px solid red;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-8 col-md-offset-2 form-container">
+            <h3 class="page-header text-center">用户信息</h3>
+            <form action="">
+                <div class="form-group">
+                    <label>用户名：</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" placeholder="请输入你的注册账号" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>邮箱：</label>
+                    <div class="input-group">
+                        <input type="text" placeholder="请输入你的邮箱" class="form-control" />
+                        <span class="input-group-addon">@qq.com</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>电话：</label>
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-bold"></i></button>
+                            <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-italic"></i></button>
+                        </div>
+                        <input type="text" placeholder="请输入你的手机号码" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>简介</label>
+                    <textarea rows="5" class="form-control" style="resize:none;"></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
