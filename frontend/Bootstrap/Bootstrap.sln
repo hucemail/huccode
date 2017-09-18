@@ -192,6 +192,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "09.表单", "09.表单\", "
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "10.JS插件", "10.JS插件\", "{77ECA328-6643-478B-A8A0-BAAB85B81795}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_11551"
+		Debug.AspNetCompiler.PhysicalPath = "10.JS插件\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_11551\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_11551"
+		Release.AspNetCompiler.PhysicalPath = "10.JS插件\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_11551\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "11551"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -215,6 +236,8 @@ Global
 		{E541D459-BA10-4EC5-BE29-AF32E722D58F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CA9BF2F-4BAB-4D25-A786-51023E53F4CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9CA9BF2F-4BAB-4D25-A786-51023E53F4CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77ECA328-6643-478B-A8A0-BAAB85B81795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77ECA328-6643-478B-A8A0-BAAB85B81795}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
