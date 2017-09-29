@@ -21,16 +21,32 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "01.NodeJS的介绍", "01.No
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "6844"
+		SlnRelativePath = "01.NodeJS的介绍\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "02.模块系统", "02.模块系统\02.模块系统.njsproj", "{6BCA35A1-A8E1-44FC-B0C3-6BBF7BFA4B12}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "03.模块化开发", "03.模块化开发\03.模块化开发.njsproj", "{353072EE-0AF0-4B1C-A0F6-2FB2CB5F4E4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{822336C6-9419-45E6-90B3-D5FF2AF885B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{822336C6-9419-45E6-90B3-D5FF2AF885B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{822336C6-9419-45E6-90B3-D5FF2AF885B0}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{822336C6-9419-45E6-90B3-D5FF2AF885B0}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6BCA35A1-A8E1-44FC-B0C3-6BBF7BFA4B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BCA35A1-A8E1-44FC-B0C3-6BBF7BFA4B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BCA35A1-A8E1-44FC-B0C3-6BBF7BFA4B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BCA35A1-A8E1-44FC-B0C3-6BBF7BFA4B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{353072EE-0AF0-4B1C-A0F6-2FB2CB5F4E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{353072EE-0AF0-4B1C-A0F6-2FB2CB5F4E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{353072EE-0AF0-4B1C-A0F6-2FB2CB5F4E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{353072EE-0AF0-4B1C-A0F6-2FB2CB5F4E4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
