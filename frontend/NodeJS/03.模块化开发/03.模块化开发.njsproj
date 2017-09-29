@@ -11,7 +11,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>353072ee-0af0-4b1c-a0f6-2fb2cb5f4e4d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>02.node模块化之node_modules\app.js</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
     <SearchPath>
     </SearchPath>
@@ -28,8 +28,30 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.js" />
-    <Content Include="README.md" />
+    <Compile Include="01.node模块化之简单使用\calc.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="01.node模块化之简单使用\app.js" />
+    <Compile Include="01.node模块化之简单使用\Person.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="02.node模块化之node_modules\app.js" />
+    <Compile Include="02.node模块化之node_modules\node_modules\calc\calc.js" />
+    <Compile Include="02.node模块化之node_modules\node_modules\person\Person.js" />
+    <Compile Include="03.使用第三方插件完成日期格式化\test.js">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="01.node模块化之简单使用\" />
+    <Folder Include="02.node模块化之node_modules\" />
+    <Folder Include="02.node模块化之node_modules\node_modules\" />
+    <Folder Include="02.node模块化之node_modules\node_modules\calc\" />
+    <Folder Include="02.node模块化之node_modules\node_modules\person\" />
+    <Folder Include="03.使用第三方插件完成日期格式化\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="02.node模块化之node_modules\package.json" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
