@@ -29,6 +29,10 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "02.模块系统", "02.模�
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "03.模块化开发", "03.模块化开发\03.模块化开发.njsproj", "{353072EE-0AF0-4B1C-A0F6-2FB2CB5F4E4D}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "04.路径", "04.路径\04.路径.njsproj", "{48B48143-7FFC-47AB-8D21-39AE093A5153}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "05.接收表单数据", "05.接收表单数据\05.接收表单数据.njsproj", "{A47EF7C7-A79E-43DE-9A5B-820595D9F880}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +51,14 @@ Global
 		{353072EE-0AF0-4B1C-A0F6-2FB2CB5F4E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{353072EE-0AF0-4B1C-A0F6-2FB2CB5F4E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{353072EE-0AF0-4B1C-A0F6-2FB2CB5F4E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48B48143-7FFC-47AB-8D21-39AE093A5153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48B48143-7FFC-47AB-8D21-39AE093A5153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48B48143-7FFC-47AB-8D21-39AE093A5153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48B48143-7FFC-47AB-8D21-39AE093A5153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A47EF7C7-A79E-43DE-9A5B-820595D9F880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A47EF7C7-A79E-43DE-9A5B-820595D9F880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A47EF7C7-A79E-43DE-9A5B-820595D9F880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A47EF7C7-A79E-43DE-9A5B-820595D9F880}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
