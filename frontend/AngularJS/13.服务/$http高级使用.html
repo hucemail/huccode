@@ -67,7 +67,7 @@
             $scope.postDynamic = function () {
                 $http({
                     method: "post",
-                    url: "http://127.0.0.1:9002/api/test/postDynamic",
+                    url: "http://localhost:5139/api/test/postDynamic",
                     data: $scope.formdata
                 }).then(function (res) {
                     $scope.data = res.data;
