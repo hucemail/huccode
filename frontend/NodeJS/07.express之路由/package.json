@@ -1,0 +1,12 @@
+{
+  "name": "07.express---",
+  "version": "0.0.0",
+  "description": "07.express之路由",
+  "main": "server.js",
+  "author": {
+    "name": "Administrator"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
