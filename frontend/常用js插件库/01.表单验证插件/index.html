@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            background-color: #f5f5f6;
+        }
+
+        .container {
+            width: 1000px;
+            height: 550px;
+            background-color: white;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form {
+            width: 330px;
+            margin: auto;
+        }
+        /*气泡提示样式*/
+        .balloon:after {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            content: " ";
+            transform: rotate(45deg);
+            border: 1px solid transparent;
+            background-color: #fff;
+            top: 12px;
+            left: -7px;
+            border-top: none;
+            border-right: none;
+            box-shadow: -1px 1px 1px 0 rgba(0,0,0,.1);
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>注册账号</h2>
+        <div class="form">
+            <div class="form-group">
+                <input type="text" class="form-control form-validator-watch" placeholder="设置你的昵称"/>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control form-validator-watch" placeholder="设置会员账号" />
+            </div>
+            <div class="form-group">
+                <input id="password" type="password" class="form-control form-validator-watch" placeholder="输入你的登录密码" />
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control form-validator-watch" placeholder="再次输入你的密码" />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control form-validator-watch" placeholder="输入你的身份证号" />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control form-validator-watch" placeholder="输入你的手机号" />
+            </div>
+            <div class="form-group">
+                <textarea class="form-control form-validator-watch" placeholder="自我介绍"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control form-validator-watch" placeholder="输入你的邮箱" />
+            </div>
+            <div class="form-group">
+                <button onclick="register();" class="btn btn-info btn-block ladda-button">
+                    立即注册
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="js/formvalidator.min.js"></script>
+    <script>
+        var form_validator_watch_options = [
+            {
+                "validator": {
+                    "autotip": true,
+                    "group": [
+                        {
+                            "type": "notEmpty",
+                            "errormsg": "设置你的昵称"
+                        }
+                    ]
+                },
+                "balloon": {
+                    "tiptext": [
+                        {
+                            "text": "昵称不能为空,推荐使用中文"
+                        }
+                    ]
+                }
+            },
+            {
+                "validator": {
+                    "autotip": true,
+                    "group": [
+                        {
+                            "type": "notEmpty",
+                            "errormsg":"设置你的会员账号"
+                        },
+                        {
+                            "type": "matches",
+                            "errormsg": "会员账号格式不正确",
+                            "extra_arg1": /^[\w\d][\w\d\.\@]{4,11}$/
+                        }
+                    ]
+                },
+                "balloon": {
+                    "tiptext": [
+                        {
+                            "text": "5-12个字符"
+                        },
+                        {
+                            "text": "必须以字母或数字开头"
+                        },
+                        {
+                            "text": "只能包含数字、字母、下划线、英文点或@符号"
+                        },
+                        {
+                            "text": "请勿包含身份证银行卡等隐私信息,一旦设置成功无法修改"
+                        }
+                    ]
+                }
+            },
+            {
+                "validator": {
+                    "autotip": true,
+                    "group": [
+                        {
+                            "type": "notEmpty",
+                            "errormsg": "请设置登录密码."
+                        },
+                        {
+                            "type": "matches",
+                            "extra_arg1": /^\S{6,20}$/,
+                            "errormsg": "登录密码不符合要求."
+                        }
+                    ]
+                },
+                "balloon": {
+                    "tiptext": [
+                        {
+                            "text": "6-20个字符"
+                        },
+                        {
+                            "text": "可以包含任何非空白字符"
+                        }
+                    ]
+                }
+            },
+            {
+                "validator": {
+                    "autotip": true,
+                    "group": [
+                        {
+                            "type": "notEmpty",
+                            "errormsg": "请再次输入你的密码."
+                        },
+                        {
+                            "type": "equalto",
+                            "extra_arg1": "password",
+                            "errormsg": "两次输入的密码不一致，请重新输入."
+                        }
+                    ]
+                },
+                "balloon": {
+                    "tiptext": [
+                        {
+                            "text": "请再次输入你的密码"
+                        }
+                    ]
+                }
+            },
+            {
+                "validator": {
+                    "autotip": true,
+                    "group": [
+                        {
+                            "type": "notEmpty",
+                            "errormsg": "请输入你的身份证."
+                        },
+                        {
+                            "type": "isIdCard",
+                            "errormsg": "身份证不合法."
+                        }
+                    ]
+                },
+                "balloon": {
+                    "tiptext": [
+                        {
+                            "text": "身份证号必须是中国合法的"
+                        }
+                    ]
+                }
+            },
+            {
+                "validator": {
+                    "autotip": true,
+                    "group": [
+                        {
+                            "type": "notEmpty",
+                            "errormsg": "请输入你的手机号码."
+                        },
+                        {
+                            "type": "isMobilePhone",
+                            "extra_arg1":"zh-CN",
+                            "errormsg": "手机号不合法."
+                        }
+                    ]
+                }
+            },
+            {},
+            {
+                "validator": {
+                    "autotip": true,
+                    "group": [
+                        {
+                            "type": "notEmpty",
+                            "errormsg": "请输入你的邮箱."
+                        },
+                        {
+                            "type": "isEmail",
+                            "errormsg": "邮箱不合法."
+                        }
+                    ]
+                }
+            }
+        ];
+        formvalidator.manualStartUp(document.getElementsByClassName("form-validator-watch"), form_validator_watch_options);
+        function register() {
+            formvalidator.validform(function () {
+                alert("验证成功");
+            }, function (errors) {
+            });
+            return false;
+        }
+    </script>
+</body>
+</html>
