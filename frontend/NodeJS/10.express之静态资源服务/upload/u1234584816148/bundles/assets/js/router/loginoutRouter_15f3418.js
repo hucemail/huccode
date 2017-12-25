@@ -1,0 +1,1 @@
+define("bundles/assets/js/router/loginoutRouter",["bundles/assets/js/app","bundles/assets/js/controller/loginoutCtrl"],function(t){return require("bundles/assets/js/controller/loginoutCtrl"),t.config(["$stateProvider",function(t){t.state("loginout",{url:"/loginout?oauth_callback",views:{container:{controller:"loginoutCtrl"}}})}])});

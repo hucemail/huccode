@@ -1,0 +1,14 @@
+{
+  "name": "14.cookie-session",
+  "version": "0.0.0",
+  "description": "14.Cookie和Session",
+  "main": "app.js",
+  "author": {
+    "name": "Administrator"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6"
+  }
+}

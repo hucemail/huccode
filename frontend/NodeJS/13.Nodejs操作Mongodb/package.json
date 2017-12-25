@@ -1,0 +1,13 @@
+{
+  "name": "13.nodejs--mongodb",
+  "version": "0.0.0",
+  "description": "13.Nodejs操作Mongodb",
+  "main": "app.js",
+  "author": {
+    "name": "Administrator"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongodb": "^3.0.0-rc0"
+  }
+}

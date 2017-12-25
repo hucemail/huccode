@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/jquery.Jcrop.min.css" rel="stylesheet" />
+</head>
+<body>
+    <img class="element_id" src="../images/man.jpg" />
+    <br />
+    <button onclick="crop()">点击剪裁</button>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.Jcrop.min.js"></script>
+    <script>
+        var jcrop_api;
+        //剪裁框的宽度和高度
+        var crop_w = 300;
+        var crop_h = 300;
+        $('.element_id').Jcrop({ aspectRatio: crop_w / crop_h }, function () {
+            jcrop_api = this;
+            //默认选择剪裁框
+            var dim = jcrop_api.getBounds();
+            jcrop_api.setSelect([((dim[0] - crop_w) / 2) + crop_w, ((dim[1] - crop_h) / 2) + crop_h, (dim[0] - crop_w) / 2, (dim[1] - crop_h) / 2]);
+        });
+        function crop() {
+            $.get("/crop", { crop: jcrop_api.tellScaled(), resize: {w:400,h:400},img:"/static/images/man.jpg" }, function (data, status) {
+                console.log(data);
+            });
+        }
+    </script>
+</body>
+</html>

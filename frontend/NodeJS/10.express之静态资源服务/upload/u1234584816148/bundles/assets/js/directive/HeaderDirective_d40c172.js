@@ -1,0 +1,1 @@
+define("bundles/assets/js/directive/HeaderDirective",["bundles/assets/js/app","bundles/assets/js/controller/headerCtrl"],function(e){return require("bundles/assets/js/controller/headerCtrl"),e.directive("headerDirective",function(){return{replace:!0,restrict:"E",controller:"headerCtrl",templateUrl:"../../../../view/header.html"}})});

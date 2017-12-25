@@ -1,0 +1,13 @@
+{
+  "name": "16.----",
+  "version": "0.0.0",
+  "description": "16.图片处理",
+  "main": "app.js",
+  "author": {
+    "name": "Administrator"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "gm": "^1.23.0"
+  }
+}

@@ -1,0 +1,1 @@
+define("bundles/assets/js/controller/baseCtrl",["bundles/assets/js/app"],function(n){return n.controller("baseCtrl",["$scope",function(n){n.$watch("$viewContentLoading",function(){}),n.$watch("$viewContentLoaded",function(){(new WOW).init()}),n.clearErrorTip=function(){n.errormsg=void 0}}])});

@@ -1,0 +1,12 @@
+{
+  "name": "15.----",
+  "version": "0.0.0",
+  "description": "15.加密解密",
+  "main": "app.js",
+  "author": {
+    "name": "Administrator"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

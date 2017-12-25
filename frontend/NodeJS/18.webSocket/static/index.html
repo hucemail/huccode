@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>简易聊天室</title>
+    <style>
+        .container {
+            width: 600px;
+            margin: auto;
+            font-size: 12px;
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        button {
+            float: right;
+            background: #00C1DE;
+            border-color: #00C1DE;
+            height: 40px;
+            font-size: 14px;
+            border-radius: 0;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #msg {
+            border: 1px solid #808080;
+            padding: 5px;
+            margin-bottom: 10px;
+            height: 300px;
+            font-size: 12px;
+            overflow-y: auto;
+        }
+
+        #tip {
+            background-color: aliceblue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <marquee id="tip"></marquee>
+        <div id="msg"></div>
+        <p>用户：<mark id="pip">dsadsfas</mark>，请输入您要发送的信息:</p>
+        <textarea rows="10" id="txt"></textarea>
+        <br /><br />
+        <button id="send">发送信息</button>
+        <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+        <script src="http://172.16.2.124:1337/socket.io/socket.io.js"></script>
+        <script>
+            $(function () {
+                var socket = io();
+                socket.on("tip", function (msg) {
+                    $("#tip").html("系统提示：用户&nbsp;&nbsp;&nbsp;<mark>" + msg + "</mark>&nbsp;&nbsp;&nbsp;进入了聊天室");
+                });
+                socket.on("pip", function (msg) {
+                    $("#pip").html(msg);
+                });
+                socket.on("msg", function (msg) {
+                    $("#msg").append("<div><span><mark>" + msg.socket_id+"</mark>:</span><br /><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+msg.msg+"</p></div >");
+                });
+                $("#send").click(function () {
+                    socket.emit("msg", $("#txt").val());
+                    $("#txt").val("");
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>

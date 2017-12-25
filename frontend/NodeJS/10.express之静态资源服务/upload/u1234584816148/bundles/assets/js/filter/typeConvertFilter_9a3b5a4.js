@@ -1,0 +1,1 @@
+define("bundles/assets/js/filter/typeConvertFilter",["bundles/assets/js/app"],function(e){return e.filter("convertToBoolean",function(){return function(e){return Boolean(e)}})});

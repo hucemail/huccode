@@ -1,0 +1,13 @@
+{
+  "name": "10.express-------",
+  "version": "0.0.0",
+  "description": "10.express之静态资源服务",
+  "main": "app.js",
+  "author": {
+    "name": "Administrator"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "mime": "^2.0.3"
+  }
+}

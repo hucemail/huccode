@@ -1,0 +1,1 @@
+define("bundles/assets/js/service/contextService",["bundles/assets/js/app"],function(e){return e.constant("contextService",{})});
